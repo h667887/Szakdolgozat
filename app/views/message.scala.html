@@ -1,0 +1,79 @@
+@import FormClasses.MailMessage
+@import helper._
+@(user: User)(messageForm: Form[MailMessage])(sumPrice: Integer)
+@implicitField = @{ FieldConstructor(fieldConstructorTemplateTextArea.f) }
+
+
+
+
+@layout("Üzenet")(user)(sumPrice) {
+
+<table id="tablepadding">
+    <tr><td>  </td></tr>
+</table>
+
+    <table class="keretlog">
+
+        @form(action=routes.HomeController.send()) {
+            @CSRF.formField
+        <tr>
+            <td colspan="5"></td>
+        </tr>
+        <tr>
+            <td width="90"></td>
+            <td class="keretuzenj" colspan="1">
+
+                @textarea(messageForm("message"), 'id -> "textarea", 'maxlength -> 600,
+                    'placeholder -> "Üzenj nekünk! (max: 600 karakter)", 'onfocus -> "this.placeholder=''",
+                    'onblur -> "this.placeholder='Üzenj nekünk! (max: 600 karakter)'")
+
+                </td>
+            <td></td>
+        </tr>
+        <tr><td height="50"></td></tr>
+
+        <tr>
+            <td colspan="5" class="inputfont">Email</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2">
+                @inputText(messageForm("email"), '_showConstraints -> false, '_label -> null, 'class -> "uinput", 'id -> "")
+            </td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+
+            <td colspan="5" class="inputfont">Name</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2">
+                @inputText(messageForm("name"), 'class -> "uinput", '_showConstraints -> false, '_label -> null)
+            </td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td colspan="5"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit" class="btn btn-warning bttne">Send</button></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="5"><label class="hiba">@if(flash.containsKey("warning")){
+                <div class="alert alert-danger">
+                    @flash().get("warning")
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close"><i class="glyphicon glyphicon-remove"></i></a>
+                </div>
+            }</label></td>
+        </tr>
+
+        }
+    </table>
+
+    <table height="200"></table>
+}

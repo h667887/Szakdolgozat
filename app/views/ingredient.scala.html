@@ -1,0 +1,22 @@
+@import java.util
+@(user: User)(ingredients: util.List[Ingredient])(sumPrice: Integer)
+@import helper._
+
+
+@layout("Userek")(user)(sumPrice) {
+    <h1 align="center">Pizza Papa</h1>
+
+    @for(ingredient <- ingredients){
+        <div class="egy-user">
+            <p>
+                @ingredient.name
+                @ingredient.price
+
+            <img src="@ingredient.imagePath">
+
+            </p>
+
+        </div>
+    }
+
+}

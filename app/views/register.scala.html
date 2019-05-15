@@ -1,0 +1,76 @@
+@import helper._
+@(user: User)(userForm : Form[User])(sumPrice: Integer)
+@implicitField = @{ FieldConstructor(fieldConstructorTemplateTextArea.f) }
+
+@layout("Register")(user)(sumPrice) {
+
+    <table id="tablepadding">
+        <tr><td>  </td></tr>
+    </table>
+
+    <table class="keretlog" border="0">
+
+
+        @form(action=routes.UserController.save()) {
+            @CSRF.formField
+
+
+            <tr>
+                <td colspan="5"></td>
+            </tr>
+
+            <tr><td height="20"></td></tr>
+
+            <tr>
+                <td colspan="5" class="inputfontreglog">Email</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                @inputText(userForm("email"), 'class -> "uinput")
+                </td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td colspan="5" class="inputfontreglog">Username</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                @inputText(userForm("username"), 'class -> "uinput")
+
+                </td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+
+                <td colspan="5" class="inputfontreglog" align="left">Password</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                @inputPassword(userForm("password"), 'class -> "uinput")
+
+                </td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+                <td></td>
+                <td><button type="submit" class="btn btn-warning bttne">Register</button></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="5"><label class="hiba"></label></td>
+            </tr>
+        }
+    </table>
+
+
+    <table height="200"></table>
+
+}

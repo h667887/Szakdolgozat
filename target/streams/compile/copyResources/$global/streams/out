@@ -1,0 +1,10 @@
+[0m[[0m[0mdebug[0m] [0m[0mCopy resource mappings: [0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\Flash\Desktop\git\PizzaPapa\4-prototipus 2\pizza-papa\conf\application.conf,C:\Users\Flash\Desktop\git\PizzaPapa\4-prototipus 2\pizza-papa\target\scala-2.12\classes\application.conf)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\Flash\Desktop\git\PizzaPapa\4-prototipus 2\pizza-papa\conf\evolutions,C:\Users\Flash\Desktop\git\PizzaPapa\4-prototipus 2\pizza-papa\target\scala-2.12\classes\evolutions)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\Flash\Desktop\git\PizzaPapa\4-prototipus 2\pizza-papa\conf\evolutions\default,C:\Users\Flash\Desktop\git\PizzaPapa\4-prototipus 2\pizza-papa\target\scala-2.12\classes\evolutions\default)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\Flash\Desktop\git\PizzaPapa\4-prototipus 2\pizza-papa\conf\evolutions\default\1.sql,C:\Users\Flash\Desktop\git\PizzaPapa\4-prototipus 2\pizza-papa\target\scala-2.12\classes\evolutions\default\1.sql)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\Flash\Desktop\git\PizzaPapa\4-prototipus 2\pizza-papa\conf\evolutions\default\1.sql_,C:\Users\Flash\Desktop\git\PizzaPapa\4-prototipus 2\pizza-papa\target\scala-2.12\classes\evolutions\default\1.sql_)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\Flash\Desktop\git\PizzaPapa\4-prototipus 2\pizza-papa\conf\evolutions\default\1.sql__,C:\Users\Flash\Desktop\git\PizzaPapa\4-prototipus 2\pizza-papa\target\scala-2.12\classes\evolutions\default\1.sql__)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\Flash\Desktop\git\PizzaPapa\4-prototipus 2\pizza-papa\conf\evolutions\default\1.sql___,C:\Users\Flash\Desktop\git\PizzaPapa\4-prototipus 2\pizza-papa\target\scala-2.12\classes\evolutions\default\1.sql___)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\Flash\Desktop\git\PizzaPapa\4-prototipus 2\pizza-papa\conf\logback.xml,C:\Users\Flash\Desktop\git\PizzaPapa\4-prototipus 2\pizza-papa\target\scala-2.12\classes\logback.xml)[0m
+[0m[[0m[0mdebug[0m] [0m[0m	(C:\Users\Flash\Desktop\git\PizzaPapa\4-prototipus 2\pizza-papa\conf\routes,C:\Users\Flash\Desktop\git\PizzaPapa\4-prototipus 2\pizza-papa\target\scala-2.12\classes\routes)[0m

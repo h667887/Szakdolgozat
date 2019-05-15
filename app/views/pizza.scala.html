@@ -1,0 +1,72 @@
+@import java.util
+@import controllers.HomeController.PizzaGroup
+@(user: User)(pizzas: util.List[PizzaGroup])(creatablePizzas: util.HashSet[String])(ingredients: util.Map[Integer, util.List[Ingredient]])(sumPrice: Integer)
+@import helper._
+
+
+@layout("Pizzák")(user)(sumPrice) {
+
+<table id="tablepadding">
+    <tr><td>  </td></tr>
+</table>
+
+    <table class="keret">
+        <tr><td colspan="8" height="30"></td></tr>
+        @for((pizza, index) <- pizzas.zipWithIndex) {
+
+            @if(index % 3 == 0) {
+                <tr>
+            }
+            <td>
+                <table height="150" width="350" border="0">
+                    <tr>
+                        <td colspan="3" class="pizzafont" align="center">@pizza.name</td>
+                    </tr>
+                    <tr>
+                        @if(creatablePizzas.contains(pizza.name)) {
+                            <td colspan="3" align="center"><img src="@routes.Assets.versioned(pizza.imagePath)" height="150" width="250"/></td>
+                        } else {
+                            <td colspan="3" align="center"><img src="@routes.Assets.versioned(pizza.notAvailImagePath)" height="150" width="250"/></td>
+                        }
+                    </tr>
+                    <tr>
+                        <td colspan="3" class="leiras">
+                            @for((key, value) <- ingredients) {
+                                @if(key == pizza.id1) {
+                                    @for(i <- 0 until value.size) {
+                                        @value(i).name@if(i < value.size-1) {,}
+                                    }
+                                }
+                            }
+                        </td>
+                    </tr>
+                    <tr><td class="paddingtd"></td></tr>
+                    <tr>
+                        <td class="arfont" >@pizza.price1</td>
+                        <td class="arfont" >@pizza.price2</td>
+                        <td class="arfont" >@pizza.price3</td>
+                    </tr>
+                    @if(creatablePizzas.contains(pizza.name)) {
+                        <td align="right"><a class="btn btn-warning bttn"  href="@routes.CartController.addToCart(pizza.id1, false)">24cm</a></td>
+                        <td align="center"><a class="btn btn-warning bttn"  href="@routes.CartController.addToCart(pizza.id2, false)">32cm</a></td>
+                        <td align="left"><a class="btn btn-warning bttn"  href="@routes.CartController.addToCart(pizza.id3, false)">51cm</a></td>
+                    } else {
+                        <td align="right"><a class="btn btn-warning bttn">24cm</a></td>
+                        <td align="center"><a class="btn btn-warning bttn">32cm</a></td>
+                        <td align="left"><a class="btn btn-warning bttn">51cm</a></td>
+                    }
+                    </tr>
+                </table>
+            </td>
+
+            @if(index == pizzas.size-1 || {index+1} % 3 == 0) {
+                </tr>
+                <tr><td colspan="5" height="30"></td></tr>
+            }
+        }
+
+    </table>
+
+<table height="200"></table>
+
+}

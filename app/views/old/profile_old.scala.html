@@ -1,0 +1,95 @@
+@import controllers.UserController.Login
+@import helper._
+@(user: User)(userForm : Form[User])(sumPrice: Integer)
+
+@layout("Pizza Papa")(user)(sumPrice) {
+    <h1 align="center">Pizza Papa</h1>
+
+    <div class="container">
+        <div class="peti-main-div row justify-content-center">
+
+
+            <div class="col-4">
+                Itt van egy gyönyörű kép
+            </div>
+            <div class="col-8">
+
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Név</td>
+                            <td>@user.fullName</td>
+                        </tr>
+                        <tr>
+                            <td>Lakcím</td>
+                            <td>@user.address</td>
+                        </tr>
+                        <tr>
+                            <td>Telefon</td>
+                            <td>@user.phoneNumber</td>
+                        </tr>
+                        <tr>
+                            <td>Email</td>
+                            <td>@user.email</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div class="row justify-content-center">
+
+                <div class="peti-main-div ">
+                    <div class="panel">
+                        <h2>Felhasználói adatok módosítása</h2>
+                        @if(flash.containsKey("danger")){
+                            <div class="alert alert-danger">
+                                @flash().get("danger")
+                                <a href="#" class="close" data-dismiss="alert" aria-label="close"><i class="glyphicon glyphicon-remove"></i></a>
+                            </div>
+                        }
+                    </div>
+
+                    @form(action=routes.UserController.profileEdit()) {
+                        @CSRF.formField
+                        <table class="table">
+                            <tbody>
+                                <tr>
+                                    <td>Név</td>
+                                    <td>@inputText(userForm("fullName"), 'class -> "form-control", '_showConstraints -> false, '_label -> null)</td>
+                                </tr>
+                                <tr>
+                                    <td>Lakcím</td>
+                                    <td>@inputText(userForm("address"), 'class -> "form-control", '_showConstraints -> false, '_label -> null)</td>
+                                </tr>
+                                <tr>
+                                    <td>Telefon</td>
+                                    <td>@inputText(userForm("phoneNumber"), 'class -> "form-control", '_showConstraints -> false, '_label -> null)</td>
+                                </tr>
+                                <tr>
+                                    <td>Email</td>
+                                    <td>@inputText(userForm("email"), 'class -> "form-control", '_showConstraints -> false, '_label -> null)</td>
+                                </tr>
+                            </tbody>
+                        </table>
+
+
+                        <input type="hidden" name="username" value="@userForm("username").value" />
+                        <input type="hidden" name="password" value="@userForm("password").value" />
+
+                        <button type="submit" class="btn btn-primary">Módosít</button>
+                    }
+
+                </div>
+
+        </div>
+        @if(user.admin){
+
+            <div class="row">
+                <div class="peti-main-div">
+                    <a class="btn btn-dark" href="@routes.UserController.admin()" role="button">Admin</a>
+                </div>
+            </div>
+        }
+    </div>
+
+}

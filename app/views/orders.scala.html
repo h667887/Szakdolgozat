@@ -1,0 +1,26 @@
+@import java.util
+@(user: User)(orders: util.List[Orders])(sumPrice: Integer)
+@import helper._
+
+
+@layout("Orders")(user)(sumPrice) {
+    <h1 align="center">Pizza Papa</h1>
+
+    @for(order <- orders) {
+        <div class="egy-user">
+            <p>
+                @order.user
+                @order.id
+                @order.productID
+                @order.isOrdered
+                @order.isDelivered
+                @order.date
+                @order.fullName
+                @order.address
+                @order.email
+                @order.phoneNumber
+            </p>
+
+        </div>
+    }
+}

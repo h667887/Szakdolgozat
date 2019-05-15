@@ -1,0 +1,20 @@
+@import java.util
+@(user: User)(userList: util.List[User])(sumPrice: Integer)
+@import helper._
+
+
+@layout("Userek")(user)(sumPrice) {
+    <h1 align="center">Pizza Papa</h1>
+
+    @for(us <- userList){
+        <div class="egy-user">
+            <p>@us.username</p>
+            <p>@us.email</p>
+            <p>@us.password</p>
+
+        </div>
+    }
+
+
+
+}

@@ -1,0 +1,86 @@
+@(title : String)(user: User)(sumPrice: Integer)(body : Html)
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+        <title>@title</title>
+        <link rel="stylesheet" media="screen" href="@routes.Assets.versioned("css/bootstrap.min.css")">
+
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("css/preload.css")">
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("css/style.css")">
+        <link rel="stylesheet" type="text/css" href="@routes.Assets.versioned("css/masterpage.css")">
+
+    </head>
+    <header>
+
+        <table align="center" border="0" id="reglog">
+            <tr>
+                @if(user != null ){
+
+
+                    <td width="60" class="font header"><a href="@routes.UserController.logout()" style="color:#dd9a39">Logout</a></td>
+                    @if(user.admin){
+                        <td width="15" class="font header"> | </td>
+                        <td class="font header"><a href="@routes.UserController.admin()" style="color:#dd9a39">Admin</a></td>
+                    }else{
+
+                        <td width="55" class="font header"></td>
+                    }
+
+
+                }else{
+                    <td width="60" class="font header"><a href="@routes.UserController.register()" style="color:#dd9a39">Register</a></td>
+                    <td width="15" class="font header"> | </td>
+                    <td class="font header"><a href="@routes.UserController.login()" style="color:#dd9a39">Login</a></td>
+
+                }
+
+                <td width="700" height="50" class="font header" align="right">@sumPrice Ft</td>
+                <td width="100" class="header" align="right"><img src="@routes.Assets.versioned("images/Untitled-1.png")" height="41" width="65"/></td>
+                <td></td>
+
+            </tr>
+        </table>
+        <table align="center" border="0" id="menu">
+
+            <tr>
+
+                <td align="center"><a id="pizza" href="@routes.HomeController.pizza()"><img src="@routes.Assets.versioned("images/Pizza0.png")" height="68" width="45"/></a></td>
+                <td align="center"><a id="drink" href="@routes.HomeController.drink()"><img src="@routes.Assets.versioned("images/Drink0.png")" height="68" width="45"/></a></td>
+                <td align="center"><a id="extra" href="@routes.HomeController.extra()"><img src="@routes.Assets.versioned("images/Extra0.png  ")" height="68" width="45"/></a></td>
+                <td align="center"><a id="creator" href="@routes.HomeController.creator()"><img src="@routes.Assets.versioned("images/creator0.png")" height="68" width="45"/></a></td>
+                <td align="center"><a id="blank" href="@routes.UserController.index()"><img src="@routes.Assets.versioned("images/blank.png")" height="68" width="90"/></a></td>
+                <td align="center"><a id="info" href="@routes.HomeController.info()"><img src="@routes.Assets.versioned("images/Info0.png")" height="68" width="45"/></a></td>
+                <td align="center"><a id="msgus" href="@routes.HomeController.message()"><img src="@routes.Assets.versioned("images/msgus0.png")" height="68" width="45"/></a></td>
+                <td align="center"><a id="account" href="@routes.UserController.profile()"><img src="@routes.Assets.versioned("images/Account0.png")" height="68" width="45"/></a></td>
+                <td align="center"><a id="cart" href="@routes.CartController.cart()"><img src="@routes.Assets.versioned("images/Cart0.png")" height="68" width="45"/></a></td>
+
+            </tr>
+        </table>
+    </header>
+
+        <body>
+
+            <section>
+
+
+                @body
+
+
+                <script src="@routes.Assets.versioned("js/jquery-3.3.1.min.js")" type="text/javascript"></script>
+                <script src="@routes.Assets.versioned("js/bootstrap.min.js")" type="text/javascript"></script>
+                <script src="@routes.Assets.versioned("js/custom.js")" type="text/javascript"></script>
+
+            </section>
+
+
+
+
+            <footer id="foot" >
+
+            </footer>
+        </body>
+
+</html>

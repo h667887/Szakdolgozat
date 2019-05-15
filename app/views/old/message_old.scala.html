@@ -1,0 +1,15 @@
+@import FormClasses.MailMessage
+@(user: User)(messageForm: Form[MailMessage])(sumPrice: Integer)
+@import helper._
+
+@layout("Üzenet")(user)(sumPrice) {
+
+    @form(action=routes.HomeController.send()) {
+        @CSRF.formField
+        @textarea(field = messageForm("message"), args = 'rows -> 3, 'cols -> 50, '_label -> null)
+        @inputText(messageForm("username"), 'class -> "form-control", '_showConstraints -> false, '_label -> null, 'placeholder -> "Felhasználónév")
+        @inputText(messageForm("email"), 'class -> "form-control", '_showConstraints -> false, '_label -> null, 'placeholder -> "Email")
+
+        <button type="submit" class="btn btn-primary">dewit</button>
+    }
+}

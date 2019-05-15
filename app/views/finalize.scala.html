@@ -1,0 +1,97 @@
+@import java.util
+@import FormClasses.CartProduct
+@import FormClasses.CheckoutUser
+@(user: User)(checkoutUserForm : Form[CheckoutUser])(products: util.List[CartProduct])(isEmpty: Boolean)(ingredients: util.Map[Integer, util.List[Ingredient]])(sumPrice: Integer)
+
+@import helper._
+@implicitField = @{ FieldConstructor(fieldConstructorTemplateTextArea.f) }
+
+
+@layout("Cart")(user)(sumPrice) {
+
+
+
+    <table id="tablepadding">
+        <tr><td>  </td></tr>
+    </table>
+
+    <table class="keretfinal" border="0">
+        <tr><td height="20"></td><td colspan="4"></td></tr>
+        <tr>
+            <td colspan="5" class="checkoutfont">CHECKOUT</td><td colspan="4"></td>
+        </tr>
+
+        <tr><td height="20"></td><td colspan="4"></td></tr>
+        @form(action=routes.CartController.checkout()) {
+            @CSRF.formField
+            <tr>
+                <td colspan="5" class="inputfontreglog">Name</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                    @inputText(checkoutUserForm("fullName"), '_showConstraints -> false, '_label -> null, 'class -> "uinput", 'id -> "")
+                </td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td colspan="5" class="inputfontreglog">Address</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                    @inputText(checkoutUserForm("address"), '_showConstraints -> false, '_label -> null, 'class -> "uinput", 'id -> "")
+                </td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+
+                <td colspan="5" class="inputfontreglog" align="left">Telephone</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                 @inputText(checkoutUserForm("phoneNumber"), '_showConstraints -> false, '_label -> null, 'class -> "uinput", 'id -> "")
+                </td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+
+                <td colspan="5" class="inputfontreglog" align="left">Email</td>
+            </tr>
+            <tr>
+                <td></td>
+                <td colspan="2">
+                    @inputText(checkoutUserForm("email"), '_showConstraints -> false, '_label -> null, 'class -> "uinput", 'id -> "")
+                </td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td></td>
+            </tr>
+            <tr>
+                <td colspan="3" class="finalfont">Total: @sumPrice Ft</td>
+                <td colspan="2"></td>
+            </tr>
+            <tr>
+                <td height="60"></td>
+                <td>
+                    <button type="submit" class="btn btn-warning bttne">Finalize</button></td>
+                </td>
+                <td></td>
+
+
+            </tr>
+            <tr>
+        }
+
+
+            <td colspan="5"><label class="hiba">@if(flash.containsKey("warning")){
+                @flash().get("warning")
+            }</label></td>
+        </tr>
+    </table>
+
+
+    <table height="200"></table>
+}

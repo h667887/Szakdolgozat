@@ -1,0 +1,77 @@
+@import java.util
+@(user: User)(drinks: util.List[Product])(sumPrice: Integer)
+@import helper._
+
+
+@layout("Drink")(user)(sumPrice) {
+    <table id="tablepadding">
+
+    </table>
+
+    <table align="center" >
+
+        <tr>
+            <td align="left" class="kicsimenu"> <a href="@routes.HomeController.drinkByType("refreshing")"><button type="button" class="btn btn-warning bttnful" id="d1">
+                Refreshing</button></a>
+                <a href="@routes.HomeController.drinkByType("monster")"><button type="button" class="btn btn-warning bttnmonster" id="d2">
+                    Monster Energy®</button></a>
+                <a href="@routes.HomeController.drinkByType("beer")"><button type="button" class="btn btn-warning bttnful" id="d3">
+                    Beer</button></a></td><td width="500"></td>
+
+        </tr>
+
+
+        <table class="keret">
+
+            <tr><td colspan="5" height="30"></td></tr>
+            @for((drink, index) <- drinks.zipWithIndex) {
+
+                @if(index % 4 == 0) {
+                    <tr>
+                    }
+                <td>
+                    <table height="150" width="250" border="0">
+                        <tr>
+                            <td colspan="3" class="pizzafont" align="center">
+                                @drink.name
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" align="center"><img src="@routes.Assets.versioned(drink.imagePath)" height="140" width="120"/></td>
+                        </tr>
+                        <tr>
+                            <td colspan="3" class="leiras">@drink.description</td>
+                        </tr>
+                        <tr><td class="paddingtd"></td></tr>
+                        <tr>
+                            <td class="arfont" ></td>
+                            <td class="arfont" >@drink.price Ft</td>
+                            <td class="arfont" ></td>
+                        </tr>
+                        <tr>
+                            <td align="right"></td>
+                            <td align="center">
+                                <a class=""  href="@routes.CartController.addToCart(drink.id, false)">
+                                    <button type="button" class="btn btn-warning bttn">Add</button>
+                                </a>
+                            </td>
+                            <td align="left"></td>
+                    <tr><td colspan="5" height="30"></td></tr>
+                        </tr>
+                    </table>
+                </td>
+
+
+                @if(index == drinks.size-1 || {index+1} % 4 == 0) {
+                </tr>
+                    <tr><td colspan="5" height="30"></td></tr>
+                }
+            }
+
+        </table>
+
+    </table>
+
+
+    <table height="200"></table>
+}

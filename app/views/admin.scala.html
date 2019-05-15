@@ -1,0 +1,417 @@
+@import helper._
+@import java.util
+@import FormClasses.NewProduct
+@import FormClasses.ProductDelete
+@import FormClasses.FormIngredient
+
+@(user: User)(orders: util.List[Orders])(addIngredientForm: Form[FormIngredient])(newProductForm : Form[NewProduct])(pizzaDeleteForm : Form[ProductDelete])(pizzas: List[String])(drinkDeleteForm : Form[ProductDelete])(drinks: List[String])(extraDeleteForm : Form[ProductDelete])(extras: List[String])(ingredientDeleteForm : Form[ProductDelete])(ingredients: List[String])(sumPrice: Integer)
+@implicitField = @{ FieldConstructor(fieldConstructorTemplateTextArea.f) }
+
+@layout("Pizza Papa")(user)(sumPrice) {
+
+    <table class="keretadmin">
+        <tr><td colspan="10">
+            <table align="center">
+
+                @if(flash.contains("success")) {
+                    <p class="success">
+                    @flash.get("success")
+                    </p>
+                }
+                @if(flash.contains("noimage")) {
+                    <p class="warning">
+                    @flash.get("noimage")
+                    </p>
+                }
+
+        <tr>
+            <td colspan="10" height="30"></td>
+        </tr>
+        <tr>
+            @form(action=routes.HomeController.deletePizza()) {
+
+                @CSRF.formField
+
+                <td ></td>
+                <td height="80">
+                    @select(
+                        pizzaDeleteForm("name"),
+                        options(pizzas),
+                        '_default -> "-- Choose Pizza --",
+                        '_showConstraints -> true,
+                        '_label -> null,
+                        'class -> "btn btn-warning bttna"
+                    )
+                </td>
+                <td></td>
+                <td class="pizzafont" width="180" align="center">Pizza</td>
+                <td></td>
+                <td><button type="submit" class="btn btn-warning bttnab">Delete</button></td>
+                <td></td>
+                <td class="hiba">hiba</td>
+                <td colspan="2"></td>
+
+            }
+
+        </tr>
+        <tr>
+            @form(action=routes.HomeController.deleteDrink()) {
+
+                @CSRF.formField
+
+                <td></td>
+                <td height="80">
+                    @select(
+                        drinkDeleteForm("name"),
+                        options(drinks),
+                        '_default -> "-- Choose Drink --",
+                        '_showConstraints -> true,
+                        '_label -> null,
+                        'class -> "btn btn-warning bttna"
+                    )
+                </td>
+                <td></td>
+                <td class="pizzafont" width="180" align="center">Drink</td>
+                <td></td>
+                <td><button type="submit" class="btn btn-warning bttnab">Delete</button></td>
+                <td></td>
+                <td class="hiba">hiba</td>
+                <td colspan="2"></td>
+
+            }
+
+        </tr>
+        <tr>
+            @form(action=routes.HomeController.deleteExtra()) {
+
+                @CSRF.formField
+
+                <td></td>
+                <td height="80">
+                @select(
+                    extraDeleteForm("name"),
+                    options(extras),
+                    '_default -> "-- Choose Extra --",
+                    '_showConstraints -> true,
+                    '_label -> null,
+                    'class -> "btn btn-warning bttna"
+                )
+                </td>
+                <td></td>
+                <td class="pizzafont" width="180" align="center">Extra</td>
+                <td></td>
+                <td><button type="submit" class="btn btn-warning bttnab">Delete</button></td>
+                <td></td>
+                <td class="hiba">hiba</td>
+                <td colspan="2"></td>
+
+            }
+        </tr>
+        <tr>
+            @form(action=routes.HomeController.deleteIngredient()) {
+
+                @CSRF.formField
+
+                <td></td>
+                <td height="80">
+                @select(
+                    ingredientDeleteForm("name"),
+                    options(ingredients),
+                    '_default -> "-- Choose Ingredient --",
+                    '_showConstraints -> true,
+                    '_label -> null,
+                    'class -> "btn btn-warning bttna"
+                )
+                </td>
+                <td></td>
+                <td class="pizzafont" width="180" align="center">Ingredient</td>
+                <td></td>
+                <td><button type="submit" class="btn btn-warning bttnab">Delete</button></td>
+                <td></td>
+                <td class="hiba">hiba</td>
+                <td colspan="2"></td>
+
+            }
+        </tr>
+            </table></td></tr>
+        <tr>
+            <td></td>
+            <td colspan="5" rowspan="14">
+                <table class="kiskeretb" align="left" valign="top">
+                    @form(action=routes.HomeController.newItem(), 'enctype -> "multipart/form-data") {
+
+                        @CSRF.formField
+                        <tr>
+                            <td height="50" width="300" colspan="2" align="center" class="checkoutfont">NEW ITEM</td><td></td>
+                        </tr>
+                        <tr>
+                            <td class="pizzafont">Item</td>
+
+                            <td class="pizzafont">Name</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @select(
+                                    newProductForm("typeP"),
+
+                                    options(
+                                        "pizza"->"Pizza",
+                                        "refreshing"->"Refreshing",
+                                        "monster"->"Monster Energy",
+                                        "beer"->"Beer",
+                                        "extra"->"Extra",
+                                        "ingredient"->"Ingredient",
+                                        "dessert"->"Dessert",
+                                        "sidedish"->"Side Dish",
+                                        "salad"->"Salad",
+                                        "pasta"->"Pasta",
+                                        "streetfood"->"Street Food",
+                                        "sandwich"->"Sandwich",
+                                        "sauce"->"Sauce"
+                                    ),
+                                    '_default -> "-- Choose Type --",
+                                    'class -> "btn btn-warning bttnak",
+                                    '_showConstraints -> true,
+                                    '_label -> null
+                                )
+
+                            </td>
+                            <td width="280">
+                                @inputText(newProductForm("name"),
+                                    'class -> "ainput",
+                                    '_showConstraints -> true,
+                                    '_label -> null)
+                            </td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr><td></td><td class="kosarfontseged">Description</td></tr>
+                        <tr>
+                            <td height="50"></td>
+                            <td>
+                                @inputText(newProductForm("description"),
+                                    'class -> "ainput",
+                                    '_showConstraints -> true,
+                                    '_label -> null
+                                )
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="img/pizza/4Sajtos.png" height="150" width="250"/></td>
+                            <td>
+                                <table>
+                                    <tr>
+                                        <td class="kosarfontseged">Global Product Price</td>
+                                    </tr>
+                                    <tr>
+                                        <td td width="280">
+                                        @inputText(newProductForm("price"),
+                                            'class -> "ainput",
+                                            '_showConstraints -> true,
+                                            '_label -> null
+                                        )
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td   height="30"></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="kosarfontseged" valign="center">24cm Pizza Price</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                        @inputText(newProductForm("price24"),
+                                            'class -> "ainput",
+                                            '_showConstraints -> true,
+                                            '_label -> null
+                                        )
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                    </tr>
+                                </table>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="kosarfontseged" valign="top">32cm Pizza Price</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @inputFile(newProductForm("imagepath"),
+                                    'class -> "btn btn-warning bttnab",
+                                    '_showConstraints -> true,
+                                    '_label -> null
+                                )
+                            </td>
+                            <td>
+                                @inputText(newProductForm("price32"),
+                                    'class -> "ainput",
+                                    '_showConstraints -> true,
+                                    '_label -> null
+                                )
+                            </td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td class="kosarfontseged" valign="top">51cm Pizza Price</td>
+                            <td></td>
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>
+                                @inputText(newProductForm("price51"),
+                                    'class -> "ainput",
+                                    '_showConstraints -> true,
+                                    '_label -> null
+                                )
+                            </td>
+                            <td ></td>
+                        </tr>
+                        <tr><td height="100"></td></tr>
+
+                </table>
+
+            </td>
+            <td></td>
+            <td>
+                <table border="0" valign="bottom">
+                    <tr><td height="50"></td></tr>
+                    <tr>
+                        <td class="pizzafont">Ingredient</td>
+                    </tr>
+
+
+                    <tr>
+
+                        <td>
+
+                        @select(
+                            addIngredientForm("ingName"),
+                            options(ingredients),
+                            '_default -> "-- Choose Ingredient --",
+                            '_showConstraints -> true,
+                            '_label -> null,
+                            'class -> "btn btn-warning bttnak"
+                        )
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20"></td>
+                    </tr>
+                    <tr>
+                        <td class="kosarfontseged">Quantity</td>
+                    </tr>
+                    <tr>
+                        <td>@inputText(addIngredientForm("quantity"),
+                            'class -> "ainput",
+                            '_showConstraints -> true,
+                            '_label -> null)</td>
+                    </tr>
+                    <tr>
+                        <td height="20"></td>
+                    </tr>
+                    <tr>
+                        <td><button type="submit" class="btn btn-warning bttn" name="action" value = "update">Update</button></td>
+                    </tr>
+
+                    <tr>
+                        <td class="hiba">hiba</td>
+                    </tr>
+
+
+                    <tr>
+                        <td height="20"></td>
+                    </tr>
+                    <tr>
+                        <td class="pizzafont">Product</td>
+                    </tr>
+                    <tr>
+                        <td><select class="btn btn-warning bttnak"><option>Valami</option></select></td>
+                    </tr>
+                    <tr>
+                        <td height="20"></td>
+                    </tr>
+                    <tr>
+                        <td class="kosarfontseged">Quantity</td>
+                    </tr>
+                    <tr>
+                        <td><input class="ainput"></td>
+                    </tr>
+                    <tr>
+                        <td height="20"></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn btn-warning bttn">Update</button></td>
+                    </tr>
+                    <tr>
+                        <td class="hiba">hiba</td>
+                    </tr>
+                    <tr>
+                        <td height="20"></td>
+                    </tr>
+                    <tr>
+                        <td class="pizzafont">User ID</td>
+                    </tr>
+                    <tr>
+                        <td><input class="ainput"></td>
+                    </tr>
+                    <tr>
+                        <td height="20"></td>
+                    </tr>
+                    <tr>
+                        <td><button type="button" class="btn btn-warning bttn">Delete</button></td>
+                    </tr>
+                    <tr>
+                        <td class="hiba">hiba</td>
+                    </tr>
+                    <tr><td></td></tr>
+                </table>
+            </td>
+            <td></td>        </tr>
+
+
+        <tr><td width="100"></td></tr><tr>
+
+
+
+        <tr><td rowspan="14" colspan="8">
+        <table border="0" align="center">
+        <tr>
+            <td height="100"></td>
+            <td valign="bottom">
+                    <button type="submit" class="btn btn-warning bttne" name="action" value="add">Add</button>
+            </td>
+            }
+            <td></td>
+            <td class="hiba" width="400" valign="bottom">hiba</td>
+            <td></td>
+            <td valign="bottom">
+                <a href="@routes.UserController.profile()">
+                    <button type="button" class="btn btn-warning bttne">Back</button>
+                </a>
+            </td>
+            <td></td>
+        </tr>
+        <tr><td height="30"></td></tr>
+        </table>
+        </td></tr>
+
+    </table>
+
+
+    <table height="200"></table>
+
+}

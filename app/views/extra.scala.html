@@ -1,0 +1,78 @@
+@import java.util
+@(user: User)(extras: util.List[Product])(sumPrice: Integer)
+@import helper._
+
+
+@layout("Extra")(user)(sumPrice) {
+
+    <table id="tablepadding">
+        <tr><td>  </td></tr>
+    </table>
+
+    <table align="center" >
+
+        <tr>
+            <td align="left" class="kicsimenu"> <a href="@routes.HomeController.extraByType("streetfood")"><button type="button" class="btn btn-warning bttnful">Streedfood</button></a>
+                <a href="@routes.HomeController.extraByType("sandwich")"><button type="button" class="btn btn-warning bttnful">Sandwich</button></a>
+                <a href="@routes.HomeController.extraByType("pasta")"><button type="button" class="btn btn-warning bttnful">Pasta</button></a>
+                <a href="@routes.HomeController.extraByType("salad")"><button type="button" class="btn btn-warning bttnful">Salad</button></a>
+                <a href="@routes.HomeController.extraByType("sidedish")"><button type="button" class="btn btn-warning bttnful">Side dish</button></a>
+                <a href="@routes.HomeController.extraByType("dessert")"><button type="button" class="btn btn-warning bttnful">Dessert</button></a>
+                <a href="@routes.HomeController.extraByType("sauce")"><button type="button" class="btn btn-warning bttnful">Sauce</button></a>
+            </td><td width="0"></td>
+
+        </tr>
+
+    <table class="keretkocsi">
+        <tr><td height="50"></td></tr>
+        <tr><td valign="top">
+
+            <table align="left" border="0">
+                <tr></tr>
+
+                @for((extra, index) <- extras.zipWithIndex) {
+
+                    <tr>
+                        <td width="50"></td>
+                        <td align="center" rowspan="2"><div class="images">
+                            <img src="@routes.Assets.versioned(extra.imagePath)"/>
+                        </div>
+                        </td>
+                        <td width="50">
+
+                    </td>
+                        <td class="kosarfont" width="100" colspan="2">@extra.name</td>
+                        <td class="extrafont" valign="center" rowspan="2">@extra.price Ft</td>
+                        <td width="50" valign="center" rowspan="2">
+                            <a class=""  href="@routes.CartController.addToCart(extra.id, false)">
+                                <button type="button" class="btn btn-warning bttne">Add</button>
+                            </a>
+                        </td>
+                        <td width="50" rowspan="2">
+
+                    </td>
+                    </tr>
+
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                        <td class="leirasextra" valign="top">@extra.description</td>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                }
+
+
+            </table>
+
+        </td></tr>
+
+    </table>
+
+    </table>
+
+    <table height="200"></table>
+
+}

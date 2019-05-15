@@ -1,0 +1,308 @@
+@import java.util
+@(user: User)(sumPrice: Integer)
+@import helper._
+
+
+@layout("Creator")(user)(sumPrice) {
+
+    <table id="tablepadding">
+        <tr><td>  </td></tr>
+    </table>
+
+    <table class="keretcreator" valign="top">
+        <tr><td height="60"></td></tr><tr><td valign="top">
+        <table>
+                <tr>
+                    <td width="30" height="50"></td><td width="90"><div class=" list__item">
+                            <input type="radio" class="radio-btn" name="cm" id="a-opt"/>
+                            <label for="a-opt" class="label">24 cm</label>
+                </div></td>
+                    <td width="50"></td><td width="150"><div class=" list__item">
+                    <input type="radio" class="radio-btn" name="sauce" id="f-opt"/>
+                    <label for="f-opt" class="label">Pizza sauce</label>
+                </div></td>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="c">
+                        <input type="checkbox"  id="c" class="option-input checkbox"/> Checkbox
+                    </label></div></td>
+                    <td valign="bottom">
+                        <label class="kosarfontseged">
+                            <input type="checkbox" class="option-input checkbox"/> Checkbox
+                        </label></td>
+                    <td valign="bottom">
+                        <label class="kosarfontseged">
+                            <input type="checkbox" class="option-input checkbox"/> Checkbox
+                        </label></td>
+                    <td></td><td></td>
+                    <td></td><td></td>
+
+                </tr>
+                <tr>
+                    <td width="30" height="50"></td></td><td><div class=" list__item">
+                    <input checked="checked" type="radio" class="radio-btn" name="cm" id="b-opt"/>
+                    <label for="b-opt" class="label">32 cm</label>
+                </div></td>
+                    <td></td><td><div class=" list__item">
+                    <input type="radio" class="radio-btn" name="sauce" id="e-opt"/>
+                    <label for="e-opt" class="label">Pizza sauce</label>
+                </div></td>
+                    <td></td><td valign="bottom">
+                    <label class="kosarfontseged">
+                        <input type="checkbox" class="option-input checkbox" /> Checkbox
+                    </label></td>
+                    <td valign="bottom">
+                        <label class="kosarfontseged">
+                            <input type="checkbox" class="option-input checkbox"/> Checkbox
+                        </label></td>
+                    <td valign="bottom">
+                        <label class="kosarfontseged">
+                            <input type="checkbox" class="option-input checkbox"/> Checkbox
+                        </label></td>
+                    <td></td><td></td>
+                    <td></td><td></td>
+
+                </tr>
+                <tr>
+                    <td width="30" height="50"></td></td><td><div class=" list__item">
+                    <input type="radio" class="radio-btn" name="cm" id="c-opt"/>
+                    <label for="c-opt" class="label">51 cm</label>
+                </div></td>
+                    <td></td><td><div class=" list__item">
+                    <input type="radio" class="radio-btn" name="sauce" id="d-opt"/>
+                    <label for="d-opt" class="label">Pizza sauce</label>
+                </div></td>
+                    <td></td><td valign="bottom">
+                    <label class="kosarfontseged">
+                        <input type="checkbox" class="option-input checkbox" /> Checkbox
+                    </label></td>
+                    <td valign="bottom">
+                        <label class="kosarfontseged">
+                            <input type="checkbox" class="option-input checkbox"/> Checkbox
+                        </label></td>
+                    <td valign="bottom">
+                        <label class="kosarfontseged">
+                            <input type="checkbox" class="option-input checkbox"/> Checkbox
+                        </label></td>
+                    <td></td><td></td>
+                    <td></td><td></td>
+
+                </tr>
+        <tr>
+            <td width="30" height="50"></td></td><td></td>
+            <td></td><td><div class=" list__item">
+            <input type="radio" class="radio-btn" name="sauce" id="h-opt"/>
+            <label for="h-opt" class="label">Pizza sauce</label>
+        </div></td>
+            <td></td><td valign="bottom">
+            <label class="kosarfontseged">
+                <input type="checkbox" class="option-input checkbox" /> Checkbox
+            </label></td>
+            <td valign="bottom">
+                <label class="kosarfontseged">
+                    <input type="checkbox" class="option-input checkbox"/> Checkbox
+                </label></td>
+            <td valign="bottom">
+                <label class="kosarfontseged">
+                    <input type="checkbox" class="option-input checkbox"/> Checkbox
+                </label></td>
+            <td></td><td></td>
+            <td></td><td></td>
+
+        </tr>
+        <tr>
+            <td width="30" height="50"></td></td><td></td>
+            <td></td><td><div class=" list__item">
+            <input type="radio" class="radio-btn" name="sauce" id="k-opt"/>
+            <label for="k-opt" class="label">Pizza sauce</label>
+        </div></td>
+            <td></td><td valign="bottom">
+            <label class="kosarfontseged">
+                <input type="checkbox" class="option-input checkbox" /> Checkbox
+            </label></td>
+            <td valign="bottom">
+                <label class="kosarfontseged">
+                    <input type="checkbox" class="option-input checkbox"/> Checkbox
+                </label></td>
+            <td valign="bottom">
+                <label class="kosarfontseged">
+                    <input type="checkbox" class="option-input checkbox"/> Checkbox
+                </label></td>
+            <td></td><td></td>
+            <td></td><td></td>
+
+        </tr>
+        <tr>
+            <td width="30" height="50"></td></td><td></td>
+            <td></td><td><div class=" list__item">
+            <input type="radio" class="radio-btn" name="sauce" id="l-opt"/>
+            <label for="l-opt" class="label">Pizza sauce</label>
+        </div></td>
+            <td></td><td valign="bottom">
+            <label class="kosarfontseged">
+                <input type="checkbox" class="option-input checkbox" /> Checkbox
+            </label></td>
+            <td valign="bottom">
+                <label class="kosarfontseged">
+                    <input type="checkbox" class="option-input checkbox"/> Checkbox
+                </label></td>
+            <td valign="bottom">
+                <label class="kosarfontseged">
+                    <input type="checkbox" class="option-input checkbox"/> Checkbox
+                </label></td>
+            <td></td><td></td>
+            <td></td><td></td>
+
+        </tr>
+        <tr>
+            <td width="30" height="50"></td></td><td></td>
+            <td></td><td><div class=" list__item">
+            <input type="radio" class="radio-btn" name="sauce" id="m-opt"/>
+            <label for="m-opt" class="label">Pizza sauce</label>
+        </div></td>
+            <td></td><td valign="bottom">
+            <label class="kosarfontseged">
+                <input type="checkbox" class="option-input checkbox" /> Checkbox
+            </label></td>
+            <td valign="bottom">
+                <label class="kosarfontseged">
+                    <input type="checkbox" class="option-input checkbox"/> Checkbox
+                </label></td>
+            <td valign="bottom">
+                <label class="kosarfontseged">
+                    <input type="checkbox" class="option-input checkbox"/> Checkbox
+                </label></td>
+            <td></td><td></td>
+            <td></td><td></td>
+
+        </tr>
+        <tr>
+            <td width="30" height="50"></td></td><td></td>
+            <td></td><td><div class=" list__item">
+            <input type="radio" class="radio-btn" name="sauce" id="n-opt"/>
+            <label for="n-opt" class="label">Pizza sauce</label>
+        </div></td>
+            <td></td><td valign="bottom">
+            <label class="kosarfontseged">
+                <input type="checkbox" class="option-input checkbox" /> Checkbox
+            </label></td>
+            <td valign="bottom">
+                <label class="kosarfontseged">
+                    <input type="checkbox" class="option-input checkbox"/> Checkbox
+                </label></td>
+            <td valign="bottom">
+                <label class="kosarfontseged">
+                    <input type="checkbox" class="option-input checkbox"/> Checkbox
+                </label></td>
+            <td></td><td></td>
+            <td></td><td></td>
+
+        </tr>
+        <tr>
+            <td width="30" height="50"></td></td><td></td>
+            <td></td><td><div class=" list__item">
+            <input type="radio" class="radio-btn" name="sauce" id="v-opt"/>
+            <label for="v-opt" class="label">Pizza sauce</label>
+        </div></td>
+            <td></td><td valign="bottom">
+            <label class="kosarfontseged">
+                <input type="checkbox" class="option-input checkbox" /> Checkbox
+            </label></td>
+            <td valign="bottom">
+                <label class="kosarfontseged">
+                    <input type="checkbox" class="option-input checkbox"/> Checkbox
+                </label></td>
+            <td valign="bottom">
+                <label class="kosarfontseged">
+                    <input type="checkbox" class="option-input checkbox"/> Checkbox
+                </label></td>
+            <td></td><td></td>
+            <td></td><td></td>
+
+        </tr>
+        <tr>
+            <td width="30" height="50"></td></td><td></td>
+            <td></td><td><div class=" list__item">
+            <input type="radio" class="radio-btn" name="sauce" id="w-opt"/>
+            <label for="w-opt" class="label">Pizza sauce</label>
+        </div></td>
+            <td></td><td valign="bottom">
+            <label class="kosarfontseged">
+                <input type="checkbox" class="option-input checkbox" /> Checkbox
+            </label></td>
+            <td valign="bottom">
+                <label class="kosarfontseged">
+                    <input type="checkbox" class="option-input checkbox"/> Checkbox
+                </label></td>
+            <td valign="bottom">
+                <label class="kosarfontseged">
+                    <input type="checkbox" class="option-input checkbox"/> Checkbox
+                </label></td>
+            <td></td><td></td>
+            <td></td><td></td>
+
+        </tr>
+        <tr>
+            <td width="30" height="50"></td></td><td></td>
+            <td></td><td><div class=" list__item">
+            <input type="radio" class="radio-btn" name="sauce" id="s-opt"/>
+            <label for="s-opt" class="label">Pizza sauce</label>
+        </div></td>
+            <td></td><td valign="bottom">
+            <label class="kosarfontseged">
+                <input type="checkbox" class="option-input checkbox" /> Checkbox
+            </label></td>
+            <td valign="bottom">
+                <label class="kosarfontseged">
+                    <input type="checkbox" class="option-input checkbox"/> Checkbox
+                </label></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+
+        </tr>
+        <tr>
+            <td width="30" height="50"></td></td><td></td>
+            <td></td><td><div class=" list__item">
+            <input type="radio" class="radio-btn" name="sauce" id="j-opt"/>
+            <label for="j-opt" class="label">Pizza sauce</label>
+        </div></td>
+            <td></td><td  valign="bottom">
+            <label class="kosarfontseged">
+                <input type="checkbox" class="option-input checkbox" /> Checkbox
+            </label></td>
+            <td valign="bottom">
+                <label class="kosarfontseged">
+                    <input type="checkbox" class="option-input checkbox"/> Checkbox
+                </label></td>
+            <td></td><td></td>
+            <td></td><td></td>
+            <td></td><td></td>
+
+        </tr>
+
+    </table>
+        </td>
+
+    <td valign="top">
+
+        <table class="" valign="center">
+            <tr><td><img src="@routes.Assets.versioned("images/alapanyag/BASE.png")" height="420" width="420"/></td></tr>
+
+        </table>
+
+    </td></tr>
+
+        <tr><td align="center" colspan="2">
+            <table align="center">
+                <tr><td></td> <td><button type="button" class="btn btn-warning bttne">Add to Cart</button></td> <td width="400"></td> <td><button type="button" class="btn btn-warning bttne">Reset</button></td></tr>
+            </table>
+        </td></tr>
+
+        <tr><td height="50"></td></tr>
+
+</table>
+
+
+
+    <table height="200"></table>
+}

@@ -1,0 +1,243 @@
+@import controllers.UserController.Login
+@import java.util
+@import helper._
+@import FormClasses.CouponHelper
+@(user: User)(userForm: Form[User])(coupons: util.List[CouponHelper])(sumPrice: Integer)
+@implicitField = @{ FieldConstructor(fieldConstructorTemplateTextArea.f) }
+
+@layout("Pizza Papa")(user)(sumPrice) {
+
+    <table id="tablepadding">
+        <tr>
+            <td></td>
+        </tr>
+    </table>
+
+    <table class="keret" border="0">
+        <tr>
+            <td width="1" colspan="1"></td>
+            <td>
+                <table class="kiskeretb profkep" border="0" background="@routes.Assets.versioned(user.imagePath)">
+                    <div class="son">
+
+                    </div>
+                    <tr>
+                        <td class="rang">
+                            <img src="@routes.Assets.versioned(user.rangPath)"/>
+                        </td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td></td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+            <td colspan="4">
+                <table class="kiskeretc" border="0" align="left" height="250">
+                    <tr>
+                        <td width="40"></td>
+                        <td class="proffont">
+                            Name:
+                        </td>
+                        <td class="proffontseged"><label>@user.fullName</label></td>
+                    </tr>
+                    <tr>
+                        <td width="10"></td>
+                        <td class="proffont">Address:</td>
+                        <td class="proffontseged">@user.address</td>
+                    </tr>
+                    <tr>
+                        <td width="10"></td>
+                        <td class="proffont">
+                            Telephone:
+                        </td>
+                        <td class="proffontseged">@user.phoneNumber</td>
+                    </tr>
+                    <tr>
+                        <td width="10"></td>
+                        <td class="proffont">Email</td>
+                        <td class="proffontseged">@user.email</td>
+                    </tr>
+
+
+                </table>
+
+            </td>
+        </tr>
+        <tr>
+            <td colspan="4">
+                <table>
+                    <tr>
+                        <td width="160"></td>
+                        <td>
+                            <button type="button" class="btn btn-warning bttnful">
+                                Browse
+                            </button>
+                        </td>
+                        <td width="280"></td>
+                        <td>
+
+                            @if(user.admin){
+                                <a href="@routes.CartController.adminOrders()">
+                                    <button type="button" class="btn btn-warning bttnful">
+                                        Orders
+                                    </button>
+                                </a>
+                            }else{
+                                <a href="@routes.CartController.myOrders()">
+                                    <button type="button" class="btn btn-warning bttnful">
+                                        Orders
+                                    </button>
+                                </a>
+                            }
+
+                        </td>
+                        <td></td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="6" valign="top">
+                <table align="right">
+                    <tr>
+
+                        <td></td>
+                        @for((coupon, index) <- coupons.zipWithIndex) {
+                            <td width="160">
+                                @if(coupon.quantity > 0){
+                                    <img src="@routes.Assets.versioned(coupon.imageGot)" height="86" width="153"/>
+                                }else{
+                                    <img src="@routes.Assets.versioned(coupon.imageNone)" height="86" width="153"/>
+                                }
+
+                            </td>
+                        }
+
+                    </tr>
+                    <tr>
+                        <td height="60"></td>
+
+
+                        @for((coupon, index) <- coupons.zipWithIndex) {
+
+                            @if(coupon.quantity > 0){
+
+                                <td class="pizzafont">@coupon.quantity db</td>
+                            }else{
+
+                                <td class="nofont">0 db</td>
+                            }
+
+                        }
+
+
+                    </tr>
+                </table>
+        </tr>
+        </td>
+        <tr>
+            <td width="100"></td>
+            <td colspan="6" width="0" class="profmod">
+                <table align="center" border="0">
+
+
+                @form(action = routes.UserController.profileEdit()) {
+                    @CSRF.formField
+
+                    <tr>
+                        <td height="50" colspan="6"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="modfont" colspan="6">Name</td>
+                        <td colspan="2">
+                        @inputText(userForm("fullName"), 'class -> "pinput", '_showConstraints -> false, '_label -> null)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="modfont" colspan="6">Address</td>
+                        <td colspan="2">
+                        @inputText(userForm("address"), 'class -> "pinput", '_showConstraints -> false, '_label -> null)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="modfont" colspan="6">Telephone</td>
+                        <td colspan="2">
+                        @inputText(userForm("phoneNumber"), 'class -> "pinput", '_showConstraints -> false, '_label -> null)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="20"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td class="modfont" colspan="6">Email</td>
+                        <td colspan="2">
+                        @inputText(userForm("email"), 'class -> "pinput", '_showConstraints -> false, '_label -> null)
+                        </td>
+                    </tr>
+                    <tr>
+                        <td height="50"></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td align="left" colspan="6">
+                            <button type="submit" class="btn btn-warning bttnful">
+                                Modify
+                            </button>
+                        </td>
+                        <td class="hibaprof">
+                            Error: Telephone
+                        </td>
+                        <td align="right">
+
+                            @if(user.admin){
+                                <a  href="@routes.UserController.admin()">
+                                    <button type="button" class="btn btn-warning bttnful">
+                                        Admin
+                                    </button>
+                                </a>
+                            }
+
+                        </td>
+                    </tr>
+
+                    <input type="hidden" name="username" value="@userForm("username").value" />
+                    <input type="hidden" name="password" value="@userForm("password").value" />
+
+                }
+                </table>
+            </td>
+            <td width="100"></td>
+        </tr>
+        <tr>
+            <td height="100" colspan="6"></td>
+        </tr>
+    </table>
+
+    <table height="200"></table>
+}
+
+

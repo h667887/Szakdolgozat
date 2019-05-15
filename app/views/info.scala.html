@@ -1,0 +1,67 @@
+@import java.util
+@(user: User)(sumPrice: Integer)
+@import helper._
+
+
+@layout("Info")(user)(sumPrice) {
+
+    <table id="tablepadding">
+        <tr><td>  </td></tr>
+    </table>
+
+    <table class="keret">
+        <tr>
+            <td colspan="5" height="50"></td>
+        </tr>
+        <tr>
+            <td class="infotd"></td>
+            <td class="infokeret infoimgpadding"><img src="@routes.Assets.versioned("images/info/Delivery.png")" height="150" width="200"/></td>
+            <td></td>
+            <td class="infokeret infotextpadding infotext infokeretseged">
+                A cégünk biztosítja a szállítást, adott városon belül ingyenesen, minimum 5000 Ft értékben való vásárlás esetén.
+                A szállítási idő függ a már meglévő megrendeléstől. Átlagosan 50-120 perc alatt teljesítjük a rendelést.</td>
+            <td class="infotd"></td>
+        </tr>
+        <tr>
+            <td colspan="5"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="infokeret infoimgpadding"><img src="@routes.Assets.versioned("images/info/Coupon.png")" height="100" width="200"/></td>
+            <td></td>
+            <td class="infokeret infotextpadding infotext infokeretseged">
+                A weboldal kuponrendszert biztosít a felhasználóink számára. Az összes rendelés összegéhez viszonyítva a kupon kiosztás:
+                <p>5000 Ft - 5% , 12000 Ft - 10% , 25000 Ft - 25% </p><p> 40000 Ft - 50% , 80000 Ft - 75%</p></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="5"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td align="left" class="infokeret infoimgpadding"><img src="@routes.Assets.versioned("images/info/aboutus.png")" height="150" width="150"/></td>
+            <td></td>
+            <td class="infokeret infotextpadding infotext infokeretseged">
+                2018-ban indult cégünk és célunk, hogy mindenki számára megtaláljuk a megfelelő ízeket! Ezért is alkottuk meg az új Creator funkciót, amely segít
+                összerakni a te saját egyedi pizzádat, amelyet mi elkészítünk neked! Továbbá egyéb finomságokat is találsz, frissítőket beleértve!</td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="5"></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td class="infokeret infoimgpadding "><img src="@routes.Assets.versioned("images/info/Terms.png")" height="150" width="150"/></td>
+            <td></td>
+            <td class="infokeret infotextpadding infotext infokeretseged">
+                A weboldalt szerzői jogok védik. Bármilyen képi anyagot, illetve információt, csak a cég beleegyezésével lehet felhasználni! <p>
+                Minden jogot fenntartunk!</p><p>Licenszelve 2018 ©</p></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="5"></td>
+        </tr>
+    </table>
+
+    <table height="200"></table>
+}

@@ -1,0 +1,148 @@
+@import java.util
+@import FormClasses.CartProduct
+@import FormClasses.CouponHelper
+@import FormClasses.FormCoupon
+@(user: User)(availableCoupons: util.List[String])(couponForm: Form[FormCoupon])(products: util.List[CartProduct])(orders: util.List[Orders])(isEmpty: Boolean)(ingredients: util.Map[Integer, util.List[Ingredient]])(sumPrice: Integer)
+@import helper._
+@implicitField = @{ FieldConstructor(fieldConstructorTemplateTextArea.f) }
+
+
+@layout("Cart")(user)(sumPrice) {
+
+
+    <table id="tablepadding">
+        <tr><td>  </td></tr>
+    </table>
+
+    <table class="keretkocsi">
+        <tr><td valign="top">
+
+        @for(product <- products) {
+            <table align="left"  border="0" class="kiskeret">
+
+
+                    <tr>
+                        <td>
+
+                        </td>
+                        <td class="kosarfont">
+
+                        </td>
+                        <td class="kosarfont">
+                            Product
+                        </td>
+                        <td class="kosarfont">
+                            Quantity
+                        </td>
+                        <td class="kosarfont">
+                            Price
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td width="50">
+
+                        </td>
+                        <td align="center" rowspan="2">
+                            <div class="images">
+                                <img src="@routes.Assets.versioned(product.imagePath)"/>
+                            </div>
+                        </td>
+                        <td class="kosarfontseged">
+                            @product.name @if(product.typeP == "pizza") {(@product.size cm)}
+                        </td>
+                        <td class="kosarfontseged">
+                            @product.quantity db
+                        </td>
+                        <td class="kosarfontseged" rowspan="2">@(product.price * product.quantity) Ft</td>
+                    </tr>
+
+                <tr>
+                    <td>
+
+                    </td>
+
+                    <td class="leiraskosar">
+                        @if(product.typeP == "pizza") {
+                            @for((key, value) <- ingredients) {
+                                @if(key == product.id) {
+                                    @for(i <- 0 until value.size) {
+                                        @value(i).name @if(i < value.size - 1) {,}
+                                    }
+                                }
+                            }
+                        } else {
+                            @product.description
+                        }
+                    </td>
+                    <td valign="top">
+
+                        <a class=""  href="@routes.CartController.addToCart(product.id, true)">
+                            <button type="submit" class="btn btn-warning bttnk" onclick="">
+                                +
+                            </button>
+                        </a>
+                        <a class=""  href="@routes.CartController.deleteItem(product.id)">
+                            <button type="submit" class="btn btn-warning bttnk" onclick="">
+                                -
+                            </button>
+                        </a>
+                    </td>
+                </tr>
+                </tr></td>
+            </table>
+
+        }
+    </td></tr>
+        <tr><td valign="top">
+
+
+        <tr><td valign="bottom" align="center">
+
+        <table border="0" align="left" >
+
+        @form(action=routes.CartController.makeOrder()) {
+
+            @CSRF.formField
+
+            <tr><td width="105"></td><td height="150" valign="bottom">@select(
+                couponForm("description"),
+                options(availableCoupons),
+                '_default -> "-- Choose Coupon --",
+                '_showConstraints -> true,
+                '_label -> null,
+                'class -> "btn btn-warning bttna"
+            )</td><td></td><td class="pizzafont" valign="bottom" align="center">@sumPrice Ft</td><td></td></tr>
+
+            <tr>
+                <td>
+
+                </td>
+                <td align="center" height="100" valign="bottom">
+                        <button type="submit" class="btn btn-warning bttn">
+                            Order
+                        </button>
+
+                </td>
+                <td>
+
+                </td>
+                <td class="hiba" width="500" align="right" valign="bottom">
+                    <label class="hiba">@if(flash.containsKey("empty")) {
+                        @flash().get("empty")
+                    }</label>
+                </td>
+
+                <td></td>
+            </tr>
+            <tr><td colspan="5" height="50"></td></tr>
+
+        }
+        </table>
+        </td></tr>
+
+    </table>
+
+    <table height="200"></table>
+
+}

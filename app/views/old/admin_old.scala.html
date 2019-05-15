@@ -1,0 +1,192 @@
+@import helper._
+@import java.util
+@import FormClasses.NewProduct
+@import FormClasses.ProductDelete
+
+@(user: User)(orders: util.List[Orders])(newProductForm : Form[NewProduct])(pizzaDeleteForm : Form[ProductDelete])(pizzas: List[String])(drinkDeleteForm : Form[ProductDelete])(drinks: List[String])(extraDeleteForm : Form[ProductDelete])(extras: List[String])(ingredientDeleteForm : Form[ProductDelete])(ingredients: List[String])(sumPrice: Integer)
+
+
+@layout("Pizza Papa")(user)(sumPrice) {
+
+    @if(flash.contains("success")) {
+        <p class="success">
+        @flash.get("success")
+        </p>
+    }
+    @if(flash.contains("noimage")) {
+        <p class="warning">
+        @flash.get("noimage")
+        </p>
+    }
+    <h1 align="center">Pizza Papa</h1>
+
+    <div class="container">
+
+        <div class="peti-main-div">
+            <div class="row">
+            @for(order <- orders) {
+                <div class="egy-user">
+                    <p>
+                        @order.user
+                        @order.id
+                        @order.productID
+                        @order.isOrdered
+                        @order.date
+
+                    </p>
+
+                </div>
+            }
+            </div>
+            @* @form(action=routes.HomeController.deletePizza()) {
+
+                @CSRF.formField
+                @helper.select(pizzaDeleteForm("name"), options = pizzas)
+
+
+                <button type="submit" class="btn btn-primary">Töröl</button>
+            }*@
+
+            <div class="row">
+                <div class="peti-main-div peti-border peti-background">
+                    <h2>Új tétel felvétele</h2>
+                @form(action=routes.HomeController.newItem(), 'enctype -> "multipart/form-data") {
+
+                    @CSRF.formField
+
+
+                    <p>Tétel típusa</p>
+                    @select(
+                        newProductForm("typeP"),
+
+                        options(
+                            "pizza"->"Pizza",
+                            "refreshing"->"Refreshing",
+                            "monster"->"Monster Energy",
+                            "beer"->"Beer",
+                            "extra"->"Extra",
+                            "ingredient"->"Ingredient",
+                            "dessert"->"Dessert",
+                            "sidedish"->"Side Dish",
+                            "salad"->"Salad",
+                            "pasta"->"Pasta",
+                            "streetfood"->"Street Food",
+                            "sandwich"->"Sandwich",
+                            "sauce"->"Sauce"
+                        ),
+                        '_default -> "-- Válassz típust --", 'class -> "form-control", '_showConstraints -> true, '_label -> null
+                    )
+
+
+                    <p>Név</p>
+                    @inputText(newProductForm("name"), 'class -> "form-control", '_showConstraints ->       true, '_label -> null)
+                    <p>Ár</p>
+                    @inputText(newProductForm("price"), 'class -> "form-control", '_showConstraints ->      true, '_label -> null)
+                    <p>24cm ár(pizza)</p>
+                    @inputText(newProductForm("price24"), 'class -> "form-control", '_showConstraints ->    true, '_label -> null)
+                    <p>32cm ár(pizza)</p>
+                    @inputText(newProductForm("price32"), 'class -> "form-control", '_showConstraints ->    true, '_label -> null)
+                    <p>51cm ár(pizza)</p>
+                    @inputText(newProductForm("price51"), 'class -> "form-control", '_showConstraints ->    true, '_label -> null)
+                    @inputFile(newProductForm("imagepath"), 'class -> "form-control", '_showConstraints ->    true, '_label -> null)
+                    <button type="submit" class="btn btn-primary">Mehet</button>
+                }
+                </div>
+                <div class="row">
+                    <div class="peti-main-div peti-border peti-background">
+                        <h2>Pizza törlés</h2>
+                    @form(action=routes.HomeController.deletePizza()) {
+
+                        @CSRF.formField
+
+
+                        <p>Tétel típusa</p>
+                        @select(
+                            pizzaDeleteForm("name"),
+                            options(pizzas),
+                            '_default -> "-- Válassz pizzát --", 'class -> "form-control", '_showConstraints -> true, '_label -> null
+                        )
+
+                        <button type="submit" class="btn btn-primary">Mehet</button>
+
+
+
+
+                    }
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="peti-main-div peti-border peti-background">
+                        <h2>Üdítő törlés </h2>
+                            @form(action=routes.HomeController.deleteDrink()) {
+
+                                @CSRF.formField
+
+
+                                <p>Üdítő neve</p>
+                                @select(
+                                    drinkDeleteForm("name"),
+                                    options(drinks),
+                                    '_default -> "-- Válassz Üdítőt --", 'class -> "form-control", '_showConstraints -> true, '_label -> null
+                                )
+
+                                <button type="submit" class="btn btn-primary">Mehet</button>
+
+
+
+                            }
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="peti-main-div peti-border peti-background">
+                        <h2>Extra törlés </h2>
+                        @form(action=routes.HomeController.deleteExtra()) {
+
+                            @CSRF.formField
+
+
+                            <p>Extra neve</p>
+                            @select(
+                                extraDeleteForm("name"),
+                                options(extras),
+                                '_default -> "-- Válassz extrát --", 'class -> "form-control", '_showConstraints -> true, '_label -> null
+                            )
+
+                            <button type="submit" class="btn btn-primary">Mehet</button>
+
+
+
+
+                        }
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="peti-main-div peti-border peti-background">
+                        <h2>Alapanyag törlés </h2>
+                        @form(action=routes.HomeController.deleteIngredient()) {
+
+                            @CSRF.formField
+
+
+                            <p>Alapanyag neve</p>
+                            @select(
+                                ingredientDeleteForm("name"),
+                                options(ingredients),
+                                '_default -> "-- Válassz alapanyagot --", 'class -> "form-control", '_showConstraints -> true, '_label -> null
+                            )
+
+                            <button type="submit" class="btn btn-primary">Mehet</button>
+
+
+
+
+                        }
+                    </div>
+                </div>
+
+        </div>
+
+
+    </div>
+
+}

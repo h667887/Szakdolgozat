@@ -1,0 +1,24 @@
+@import java.util
+@(user: User)(extras: util.List[Product])(sumPrice: Integer)
+@import helper._
+
+
+@layout("Userek")(user)(sumPrice) {
+    <h1 align="center">Pizza Papa</h1>
+
+    @for(extra <- extras){
+        <div class="egy-user">
+            <p>
+                @extra.name
+                @extra.price
+                <img src="@routes.Assets.versioned("public/images/conke.png")" />
+                @form(action = routes.CartController.addToCart(extra.id, false)) {
+                    @CSRF.formField
+                    <button type="submit" class="btn btn-primary">@extra.price</button>
+                }
+            </p>
+
+        </div>
+    }
+
+}

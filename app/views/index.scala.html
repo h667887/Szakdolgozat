@@ -1,0 +1,24 @@
+@import java.util
+@(user: User)(sumPrice: Integer)
+@import helper._
+
+
+@layout("Index")(user)(sumPrice) {
+
+<table id="tablepadding">
+<tr><td>  </td></tr>
+</table>
+    @if(flash.contains("pw_reset")) {
+        <p class="success">
+            <a href="@flash.get("pw_reset")">Ide kattintva</a> új jelszót állíthatsz be.
+        </p>
+    }
+<table class="keretindex" ></table>
+
+
+</table>
+
+<table height="200"></table>
+
+
+}

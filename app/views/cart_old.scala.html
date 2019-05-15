@@ -1,0 +1,27 @@
+@import java.util
+@(user: User)(products: util.List[Product])(orders: util.List[Orders])(isEmpty: Boolean)(sumPrice: Integer)
+@import helper._
+
+
+@layout("Userek")(user)(sumPrice) {
+    <h1 align="center">Pizza Papa</h1>
+    Kamasuki
+    @for(product <- products) {
+        ASDASD
+        <div class="egy-user">
+            <p>
+                @product.name
+                @product.price
+                @product.typeP
+                @product.size
+                @form(action = routes.CartController.deleteItem(product.id)) {
+                    @CSRF.formField
+                    @if(isEmpty) {
+                        <button type="submit" disabled class="btn btn-primary">Törlés</button>
+                    }
+                }
+            </p>
+
+        </div>
+    }
+}

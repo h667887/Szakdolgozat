@@ -1,0 +1,148 @@
+@import java.util
+@import FormClasses.CartProduct
+@(user: User)(orders: util.List[Orders])(products: util.List[CartProduct])(sumPrice: Integer)
+@import helper._
+
+
+@layout("My Orders")(user)(sumPrice) {
+
+    <table id="tablepadding">
+        <tr><td>  </td></tr>
+    </table>
+
+    <table class="keretkocsi">
+
+        @for((order, product) <- orders.zip(products)) {
+
+
+
+            <tr><td valign="top">
+                <table align="left" border="0" class="kiskeret">
+                    <tr>
+                        <td>
+
+                    </td>
+                        <td class="kosarfont">
+
+                    </td>
+                        <td class="kosarfont">
+                        Product
+                        </td>
+                        <td class="kosarfont">
+                        Quantity
+                        </td>
+                        <td class="kosarfont">
+                        Price
+                        </td>
+                        <td>
+
+                    </td>
+                        <td class="kosarfont">
+                        Date
+                        </td>
+                        <td>
+
+                    </td>
+                        <td class="kosarfont">
+                        Address
+                        </td>
+                    </tr>
+                    <tr>
+                        <td width="50">
+
+                    </td>
+                        <td align="center" rowspan="2">
+                            <div class="images">
+                                <img src="@routes.Assets.versioned(product.imagePath)"/>
+                            </div>
+                        </td>
+                        <td class="kosarfontseged">
+                        </td>
+                        <td class="kosarfontseged">
+                        @product.quantity db
+                        </td>
+                        <td class="kosarfontseged">
+                        @product.price Ft
+                        </td>
+                        <td>
+
+                </td>
+                        <td class="kosarfontseged">
+                            @order.date
+                            2018-10-29
+                        </td>
+                        <td>
+
+                    </td>
+                        <td class="kosarfontseged">
+                            Szeged Szeged Szeged Szeged
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+
+                    </td>
+                        <td class="leiraskosar">
+                            
+                        </td>
+                        <td>
+
+                    </td>
+                        <td>
+
+                    </td>
+                        <td>
+
+                    </td>
+                        <td class="leiraskosar">
+                        17:11
+                        </td>
+                        <td>
+
+                    </td>
+                        <td class="leiraskosar">
+                        Jóska u. 24 2/A 6 cs.
+                        </td>
+                    </tr>
+                    </tr> </td>
+
+                    }
+
+
+
+        <tr><td valign="bottom" align="center">
+            <table border="0" align="left" >
+
+                <tr>
+                    <td width="450">
+
+                    </td>
+                    <td align="center" height="100" valign="bottom">
+                        <a href="@routes.UserController.profile()">
+                            <button type="button" class="btn btn-warning bttn">
+                                Back
+                            </button>
+                        </a>
+                    </td>
+                    <td>
+
+                    </td>
+                    <td>
+
+                    </td>
+                    </td>
+                    <td>
+
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="5" height="50"></td></tr>
+
+            </table>
+        </td></tr>
+
+    </table>
+
+        <table height="200"></table>
+
+}

@@ -1,0 +1,288 @@
+@import java.util
+@(user: User)(sizes: util.List[Integer])(ingredients: util.List[Ingredient])(sumPrice: Integer)
+@import helper._
+
+
+@layout("Creator")(user)(sumPrice) {
+
+    <table id="tablepadding">
+        <tr><td>  </td></tr>
+    </table>
+
+    <table class="keretcreator" valign="top">
+        <tr><td height="60"></td></tr><tr><td valign="top">
+        <table>
+                <tr>
+                    <td width="50"></td><td width="90"><div class=" list__item">
+                            <input type="radio" class="radio-btn" name="cm" id="a-opt"/>
+                            <label for="a-opt" class="label">24 cm</label>
+                </div></td><td>
+                </tr>
+                <tr>
+                    <td width="50"><td><div class=" list__item">
+                    <input checked="checked" type="radio" class="radio-btn" name="cm" id="b-opt"/>
+                    <label for="b-opt" class="label">32 cm</label>
+                </div></td>
+                </tr>
+                <tr>
+                    <td width="50"><td><div class=" list__item">
+                    <input type="radio" class="radio-btn" name="cm" id="c-opt"/>
+                    <label for="c-opt" class="label">51 cm</label>
+                </div></td>
+                </tr>
+        </table>
+        </td>
+
+        <td  valign="top">
+        <table>
+            <tr>
+                <td width="10"></td><td width="150"><div class=" list__item">
+            <input type="radio" class="radio-btn" name="sauce" id="f-opt"/>
+            <label for="f-opt" class="label">Pizza sauce</label>
+        </div></td>
+            </tr>
+            <tr>
+                <td width="10"><td width="150"><div class=" list__item">
+                <input type="radio" class="radio-btn" name="sauce" id="h-opt"/>
+                <label for="h-opt" class="label">Pizza sauce</label>
+            </div></td>
+            </tr>
+            <tr>
+                <td width="10"><td width="150"><div class=" list__item">
+                <input type="radio" class="radio-btn" name="sauce" id="g-opt"/>
+                <label for="g-opt" class="label">Pizza sauce</label>
+            </div></td>
+            </tr>
+            <tr>
+                <td width="10"><td width="150"><div class=" list__item">
+                <input type="radio" class="radio-btn" name="sauce" id="j-opt"/>
+                <label for="j-opt" class="label">Pizza sauce</label>
+            </div></td>
+            </tr>
+            <tr>
+                <td width="10"><td width="150"><div class=" list__item">
+                <input type="radio" class="radio-btn" name="sauce" id="k-opt"/>
+                <label for="k-opt" class="label">Pizza sauce</label>
+            </div></td>
+            </tr>
+            <tr>
+                <td width="10"> <td width="150"><div class=" list__item">
+                <input type="radio" class="radio-btn" name="sauce" id="l-opt"/>
+                <label for="l-opt" class="label">Pizza sauce</label>
+            </div></td>
+            </tr>
+            <tr>
+                <td width="10"><td width="150"><div class=" list__item">
+                <input type="radio" class="radio-btn" name="sauce" id="m-opt"/>
+                <label for="m-opt" class="label">Pizza sauce</label>
+            </div></td>
+            </tr>
+            <tr>
+                <td width="10"><td width="150"><div class=" list__item">
+                <input type="radio" class="radio-btn" name="sauce" id="n-opt"/>
+                <label for="n-opt" class="label">Pizza sauce</label>
+            </div></td>
+            </tr>
+            <tr>
+                <td width="10"><td width="150"><div class=" list__item">
+                <input type="radio" class="radio-btn" name="sauce" id="v-opt"/>
+                <label for="v-opt" class="label">Pizza sauce</label>
+            </div></td>
+            </tr>
+        </table>
+        </td>
+
+        <td  valign="top">
+            <table>
+                <tr><td colspan="10" height="20"></td></tr>
+                <tr>
+                <td></td><td valign="bottom"><div class="kosarfontseged">
+                <label class="checktext" for="">
+                    <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                </label></div></td><td></td>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                </tr>
+                <tr><td colspan="10" height="20"></td></tr>
+                <tr>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                </tr>
+                <tr><td colspan="10" height="20"></td></tr>
+                <tr>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                </tr>
+                <tr><td colspan="10" height="20"></td></tr>
+                <tr>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                </tr>
+                <tr><td colspan="10" height="20"></td></tr>
+                <tr>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                </tr>
+                <tr><td colspan="10" height="20"></td></tr>
+                <tr>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                </tr>
+                <tr><td colspan="10" height="20"></td></tr>
+                <tr>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                </tr>
+                <tr><td colspan="10" height="20"></td></tr>
+                <tr>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                </tr>
+                <tr><td colspan="10" height="20"></td></tr>
+                <tr>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                </tr>
+                <tr><td colspan="10" height="20"></td></tr>
+                <tr>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                </tr>
+                <tr><td colspan="10" height="20"></td></tr>
+                <tr>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+                    <td></td><td valign="bottom"><div class="kosarfontseged">
+                    <label class="checktext" for="">
+                        <input type="checkbox"  id="" class="option-input checkbox"/> CHECKBOX
+                    </label></div></td><td></td>
+
+                </tr>
+
+
+            </table>
+        </td>
+
+
+    <td valign="top" width="450">
+
+        <table class="" valign="center">
+            <tr><td><img src="@routes.Assets.versioned("images/alapanyag/BASE.png")" height="420" width="420"/></td></tr>
+
+        </table>
+
+    </td></tr>
+
+        <tr><td></td><td></td><td colspan="2">
+            <table align="left">
+                <tr><td><button type="button" class="btn btn-warning bttne">Add to Cart</button></td><td></td> <td width="300"></td> <td><button type="button" class="btn btn-warning bttne">Reset</button></td><td width="100"></td></tr>
+            </table>
+        </td></tr>
+
+        <tr><td height="50"></td></tr>
+
+</table>
+
+
+
+    <table height="200"></table>
+
+}

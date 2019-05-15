@@ -1,0 +1,64 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# An example controller showing a sample home page
+GET     /                                   controllers.UserController.index()
+GET     /index                              controllers.UserController.index()
+GET     /login                              controllers.UserController.login()
+POST    /login                              controllers.UserController.authenticate()
+GET     /logout                             controllers.UserController.logout()
+
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file                       controllers.Assets.versioned(path="/public", file: Asset)
+GET     /register/reset_password/:token     controllers.UserController.resetPassword(token: String)
+POST    /register/reset_password/:token     controllers.UserController.resetPasswordPost(token: String)
+GET     /register/reset_password            controllers.UserController.askResetPasswordGet()
+POST    /register/reset_password            controllers.UserController.askResetPasswordPost()
+
+
+GET     /creator                            controllers.HomeController.creator()
+GET     /info                               controllers.HomeController.info()
+
+GET     /register                           controllers.UserController.register()
+POST    /register                           controllers.UserController.save()
+GET     /userek                             controllers.UserController.listUsers()
+
+
+GET     /user/profile                       controllers.UserController.profile()
+POST    /user/profile                       controllers.UserController.profileEdit()
+GET     /admin                              controllers.UserController.admin()
+
+GET     /unauthorized                       controllers.HomeController.notAuthorized()
+GET     /pizza                              controllers.HomeController.pizza()
+
+
+GET     /orders/finalize                    controllers.CartController.makeOrder()
+GET     /orders                             controllers.CartController.orders()
+GET     /my_orders                          controllers.CartController.myOrders()
+GET     /admin_orders                       controllers.CartController.adminOrders()
+GET     /cart                               controllers.CartController.cart()
+POST    /cart                               controllers.CartController.makeOrder()
+GET     /remove_cart                        controllers.CartController.deleteItem(productId: Int)
+GET     /add_cart                           controllers.CartController.addToCart(pizzaId: Int, cart: Boolean)
+GET     /checkout                           controllers.CartController.checkout()
+
+GET     /drink/:drinkType                   controllers.HomeController.drinkByType(drinkType: String)
+GET     /drink                              controllers.HomeController.drink()
+GET     /extra                              controllers.HomeController.extra()
+GET     /extra/:extraType                   controllers.HomeController.extraByType(extraType: String)
+GET     /ingredients                        controllers.HomeController.listIngredients()
+GET     /message                            controllers.HomeController.message()
+POST    /message                            controllers.HomeController.send()
+
+POST    /additem                            controllers.HomeController.newItem()
+POST    /delete_pizza                       controllers.HomeController.deletePizza()
+POST    /delete_drink                       controllers.HomeController.deleteDrink()
+POST    /delete_extra                       controllers.HomeController.deleteExtra()
+POST    /delete_ingredient                  controllers.HomeController.deleteIngredient()
+
+
+
+
+

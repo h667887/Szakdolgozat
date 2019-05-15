@@ -1,0 +1,24 @@
+@import java.util
+@(user: User)(drinks: util.List[Product])(sumPrice: Integer)
+@import helper._
+
+
+@layout("Userek")(user)(sumPrice) {
+    <h1 align="center">Pizza Papa</h1>
+
+    @for(drink <- drinks){
+        <div class="egy-user">
+            <p>
+                @drink.name
+                @drink.price
+                <img src="@drink.imagePath">
+                @form(action = routes.CartController.addToCart(drink.id, false)) {
+                    @CSRF.formField
+                    <button type="submit" class="btn btn-primary">@drink.price</button>
+                }
+            </p>
+
+        </div>
+    }
+
+}

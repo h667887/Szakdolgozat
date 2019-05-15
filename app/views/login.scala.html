@@ -1,0 +1,83 @@
+@import controllers.UserController.Login
+@import helper._
+@(loginForm : Form[Login])(user: User)(sumPrice: Integer)
+@implicitField = @{ FieldConstructor(fieldConstructorTemplateTextArea.f) }
+
+@layout("Login")(user)(sumPrice) {
+
+
+    <table id="tablepadding">
+        <tr><td>  </td></tr>
+    </table>
+
+    <table class="keretlog">
+
+        @form(action=routes.UserController.authenticate()) {
+
+            @CSRF.formField
+        <tr>
+            <td colspan="5">
+                @if(loginForm.hasGlobalErrors) {
+                    <p class="error">
+                    @loginForm.globalError.message()
+                    </p>
+                }
+                @if(flash.contains("success")) {
+                    <p class="success">
+                    @flash.get("success")
+                    </p>
+                }
+                @if(flash.contains("pw_reset")) {
+                    <p class="success">
+                        <a href="@flash.get("pw_reset")">Ide kattintva</a> új jelszót állíthatsz be.
+                    </p>
+                }
+            </td>
+        </tr>
+
+        <tr><td height="20"></td></tr>
+
+        <tr>
+            <td colspan="5" class="inputfontreglog">Email</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2">
+                @inputText(loginForm("email"), 'class -> "uinput")
+            </td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+
+            <td colspan="5" class="inputfontreglog">Password</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td colspan="2">
+                @inputPassword(loginForm("password"), 'class -> "uinput")
+
+            </td>
+            <td colspan="2"></td>
+        </tr>
+        <tr>
+            <td class="font header" align="center" colspan="5"><a href="@routes.UserController.askResetPasswordGet()" style="color:#dd9a39">Forgotten Password</a></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td><button type="submit" class="btn btn-warning bttne">Login</button></td>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td colspan="5"><label class="hiba"></label></td>
+        </tr>
+
+        }
+    </table>
+
+
+    <table height="200"></table>
+
+
+}

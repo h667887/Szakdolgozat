@@ -1,0 +1,34 @@
+@(user: User)(userForm : Form[User])(sumPrice: Integer)
+@import helper._
+
+
+@layout("Regisztráció")(user)(sumPrice) {
+    <h1 align="center">Pizza Papa</h1>
+
+
+    <div class="login-form">
+        <div class="main-div">
+            <div class="panel">
+                <h2>Regisztráció</h2>
+                <p>Írd be adataid, dilóm</p>
+            @if(flash.containsKey("danger")){
+                <div class="alert alert-danger">
+                    @flash().get("danger")
+                    <a href="#" class="close" data-dismiss="alert" aria-label="close"><i class="glyphicon glyphicon-remove"></i></a>
+                </div>
+            }
+            </div>
+
+            @form(action=routes.UserController.save()) {
+                @CSRF.formField
+                @inputText(userForm("username"), 'class -> "form-control", '_showConstraints -> false, '_label -> null, 'placeholder -> "Felhasználónév")
+                @inputText(userForm("email"), 'class -> "form-control", '_showConstraints -> false, '_label -> null, 'placeholder -> "Email")
+                @inputPassword(userForm("password"), 'class -> "form-control", '_showConstraints -> false, '_label -> null, 'placeholder -> "Jelszó")
+
+                <button type="submit" class="btn btn-primary">dewit</button>
+            }
+
+        </div>
+    </div>
+
+}
