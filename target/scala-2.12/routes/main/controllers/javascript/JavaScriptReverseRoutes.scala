@@ -1,6 +1,6 @@
 // @GENERATOR:play-routes-compiler
-// @SOURCE:C:/Users/Flash/Desktop/git/PizzaPapa/4-prototipus 2/pizza-papa/conf/routes
-// @DATE:Thu Dec 06 19:23:19 CET 2018
+// @SOURCE:C:/Users/Flash/Documents/GitHub/Szakdolgozat/conf/routes
+// @DATE:Wed May 15 13:56:36 CEST 2019
 
 import play.api.routing.JavaScriptReverseRoute
 

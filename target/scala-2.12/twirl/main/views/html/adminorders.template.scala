@@ -32,8 +32,7 @@ object adminorders extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.ap
 /*3.2*/import helper._
 
 
-Seq[Any](format.raw/*2.60*/("""
-"""),format.raw/*4.1*/("""
+Seq[Any](format.raw/*4.1*/("""
 
 """),_display_(/*6.2*/layout("Admin Orders")/*6.24*/(user)/*6.30*/(sumPrice)/*6.40*/ {_display_(Seq[Any](format.raw/*6.42*/("""
 
@@ -135,11 +134,11 @@ Seq[Any](format.raw/*2.60*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 06 19:23:20 CET 2018
-                  SOURCE: C:/Users/Flash/Desktop/git/PizzaPapa/4-prototipus 2/pizza-papa/app/views/adminorders.scala.html
-                  HASH: 161f05470a563e36b1957be7652e4744617563dd
-                  MATRIX: 651->1|1002->20|1133->81|1178->78|1206->98|1236->103|1266->125|1280->131|1298->141|1337->143|1371->151
-                  LINES: 24->1|29->2|32->3|35->2|36->4|38->6|38->6|38->6|38->6|38->6|40->8
+                  DATE: Wed May 15 13:56:37 CEST 2019
+                  SOURCE: C:/Users/Flash/Documents/GitHub/Szakdolgozat/app/views/adminorders.scala.html
+                  HASH: 6c8b900de1cc0f42c66e1a16de404cd48196069d
+                  MATRIX: 651->1|1002->19|1133->79|1177->95|1205->98|1235->120|1249->126|1267->136|1306->138|1338->144
+                  LINES: 24->1|29->2|32->3|35->4|37->6|37->6|37->6|37->6|37->6|39->8
                   -- GENERATED --
               */
           

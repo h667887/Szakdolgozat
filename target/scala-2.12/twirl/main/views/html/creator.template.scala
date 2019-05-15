@@ -32,8 +32,7 @@ object creator extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Ht
 /*3.2*/import helper._
 
 
-Seq[Any](format.raw/*2.96*/("""
-"""),format.raw/*4.1*/("""
+Seq[Any](format.raw/*4.1*/("""
 
 """),_display_(/*6.2*/layout("Creator")/*6.19*/(user)/*6.25*/(sumPrice)/*6.35*/ {_display_(Seq[Any](format.raw/*6.37*/("""
 
@@ -333,11 +332,11 @@ Seq[Any](format.raw/*2.96*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 06 19:23:20 CET 2018
-                  SOURCE: C:/Users/Flash/Desktop/git/PizzaPapa/4-prototipus 2/pizza-papa/app/views/creator.scala.html
-                  HASH: 9bd3ad53b95791f813c558bde43e169ceaa08502
-                  MATRIX: 651->1|1021->20|1188->117|1233->114|1261->134|1291->139|1316->156|1330->162|1348->172|1387->174|1421->182|15547->14280|15563->14286|15631->14332
-                  LINES: 24->1|29->2|32->3|35->2|36->4|38->6|38->6|38->6|38->6|38->6|40->8|300->268|300->268|300->268
+                  DATE: Wed May 15 13:56:37 CEST 2019
+                  SOURCE: C:/Users/Flash/Documents/GitHub/Szakdolgozat/app/views/creator.scala.html
+                  HASH: 65c00c42ec2316f8a4af1cdb90873e844ccbaa64
+                  MATRIX: 651->1|1021->19|1188->115|1232->131|1260->134|1285->151|1299->157|1317->167|1356->169|1388->175|15254->14013|15270->14019|15338->14065
+                  LINES: 24->1|29->2|32->3|35->4|37->6|37->6|37->6|37->6|37->6|39->8|299->268|299->268|299->268
                   -- GENERATED --
               */
           

@@ -32,8 +32,7 @@ object message_old extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.ap
 /*3.2*/import helper._
 
 
-Seq[Any](format.raw/*2.65*/("""
-"""),format.raw/*4.1*/("""
+Seq[Any](format.raw/*4.1*/("""
 """),_display_(/*5.2*/layout("Üzenet")/*5.18*/(user)/*5.24*/(sumPrice)/*5.34*/ {_display_(Seq[Any](format.raw/*5.36*/("""
 
     """),_display_(/*7.6*/form(action=routes.HomeController.send())/*7.47*/ {_display_(Seq[Any](format.raw/*7.49*/("""
@@ -60,11 +59,11 @@ Seq[Any](format.raw/*2.65*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 06 19:23:21 CET 2018
-                  SOURCE: C:/Users/Flash/Desktop/git/PizzaPapa/4-prototipus 2/pizza-papa/app/views/old/message_old.scala.html
-                  HASH: eee849f3ff1a5c9e3bca5aca068554c86922df4b
-                  MATRIX: 655->1|1020->34|1156->100|1201->97|1229->117|1257->120|1281->136|1295->142|1313->152|1352->154|1386->163|1435->204|1474->206|1511->217|1523->221|1553->231|1590->242|1699->331|1737->342|1898->481|1936->492|2085->619|2124->631|2221->698
-                  LINES: 24->1|29->2|32->3|35->2|36->4|37->5|37->5|37->5|37->5|37->5|39->7|39->7|39->7|40->8|40->8|40->8|41->9|41->9|42->10|42->10|43->11|43->11|45->13|46->14
+                  DATE: Wed May 15 13:56:37 CEST 2019
+                  SOURCE: C:/Users/Flash/Documents/GitHub/Szakdolgozat/app/views/old/message_old.scala.html
+                  HASH: 9055d758c5c7ee05c7bd8ad0d430edcae5c66874
+                  MATRIX: 655->1|1020->33|1156->98|1200->114|1227->116|1251->132|1265->138|1283->148|1322->150|1354->157|1403->198|1442->200|1478->210|1490->214|1520->224|1556->234|1665->323|1702->333|1863->472|1900->482|2049->609|2086->619|2182->685
+                  LINES: 24->1|29->2|32->3|35->4|36->5|36->5|36->5|36->5|36->5|38->7|38->7|38->7|39->8|39->8|39->8|40->9|40->9|41->10|41->10|42->11|42->11|44->13|45->14
                   -- GENERATED --
               */
           

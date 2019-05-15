@@ -1,0 +1,448 @@
+
+.keret {
+
+     border: 5px solid transparent;
+     border-image: url(../images/wood.png) 10% round;
+     text-align: center;
+     margin-left: auto;
+     margin-right: auto;
+     border-collapse: separate;
+     background-image: url("../images/asd.png");
+     height: 1000px;
+     width: 1000px;
+ }
+
+.keretkocsi {
+
+    border: 5px solid transparent;
+    border-image: url(../images/wood.png) 10% round;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    background-image: url("../images/asd.png");
+    height: 500px;
+    width: 1000px;
+}
+
+.keretlog {
+
+    border: 5px solid transparent;
+    border-image: url(../images/wood.png) 10% round;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    background-image: url("../images/asd.png");
+    height: 500px;
+    width: 700px;
+}
+
+.keretindex {
+
+    border: 5px solid transparent;
+    border-image: url(../images/wood.png) 20% round;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    background-image: url("../images/index.png");
+    width: 1000px;
+    height: 1000px;
+
+}
+
+.keretuzenj{
+    border: 10px solid transparent;
+    border-image: url(../images/texture3.png) 20% round;
+    text-align: center;
+    width: 830px;
+    height: 561px;
+    position: relative;
+}
+
+.kiskeret {
+
+    border: 2px solid transparent;
+    border-image: url(../images/texture3.png) 20% round;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    background-repeat: no-repeat;
+}
+
+.kicsikep{
+    width: 1000px;
+    height: 1000px;
+
+}
+
+
+.kicsimenu{
+
+    border: 1px;
+    border-image: url("../images/wood.png") !important;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    background-image: url("../images/wood.png");
+
+}
+
+.header{
+    height: 50px;
+
+}
+
+.hm-gradient {
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+.darken-grey-text {
+    color: #2E2E2E;
+}
+
+body{
+    background: url("../images/t2222.jpg") 100% repeat;
+    padding-left: 0;
+
+}
+#menu{
+    background-image:url("../images/MENUnew.png");
+    width: 1000px;
+    height: 120px;
+
+}
+
+.pizzafont{
+    font-family: "Tw Cen MT";
+    font-size: 27px;
+    font-weight: bold;
+    color: #ac0018;
+
+
+}
+
+.kosarfont{
+    font-family: "Tw Cen MT";
+    font-size: 27px;
+    font-weight: bold;
+    color: #ac0018;
+    width: 180px;
+    height: 50px;
+    vertical-align: top;
+
+}
+
+.kosarfontseged{
+    font-family: "Tw Cen MT";
+    font-size: 20px;
+    font-weight: bold;
+    color: #032d37;
+    width: 180px;
+    vertical-align: top;
+
+}
+
+.font{
+    font-family: "Tw Cen MT";
+    font-size: 20px;
+    font-weight: bold;
+    color: #dd9a39;
+}
+
+a:hover {
+    color: orangered !important;
+}
+a:active {
+    color: #dd9a39 !important;
+}
+
+.hiba{
+    font-family: "Tw Cen MT";
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+
+
+}
+
+
+.inputfont{
+    font-family: "Tw Cen MT";
+    font-size: 20px;
+    font-weight: bold;
+    color: #5a3e12;
+    height: 1px;
+    width: 3px;
+    text-align: left;
+    text-indent: 307px;
+
+}
+
+.inputfontreglog{
+    font-family: "Tw Cen MT";
+    font-size: 20px;
+    font-weight: bold;
+    color: #5a3e12;
+    height: 1px;
+    width: 3px;
+    text-align: center;
+
+
+}
+
+#tablepadding{
+    padding: 30px;
+    border-collapse: separate;
+
+}
+
+
+#foot{
+    background: url("../images/woood.png") repeat;
+    position: absolute;
+    min-height: 35%;
+    width: 100%;
+    margin-bottom: -100%;
+    margin-right: -1px;
+
+}
+
+.bttne{
+    background-image:  url("../images/WoodBtn.png");
+    border: 2px solid #876729;
+    font-size: 16px;
+    padding: 10px 60px;
+}
+.bttne:hover{
+    background-image:  url("../images/texture01.png");
+
+
+}
+.bttne:active{
+    background-image:  url("../images/WoodBtn.png");
+
+}
+
+.bttnful{
+    background-image:  url("../images/kismenu.jpg");
+    border: 1px solid #000000;
+    border-color: black;
+    font-size: 16px;
+    padding: 10px 20px;
+    color: black !important;
+    font: bold 20px "Tw Cen MT" !important;
+    text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke, 0 -1px whitesmoke;
+
+}
+
+
+.bttnful:hover{
+    background-image:  url("../images/kismenuhover.jpg");
+    border-color: white;
+    color: white !important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+
+
+.bttnful:active{
+    background-image:  url("../images/kismenu.jpg");
+    border-color: black !important;
+    text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke, 0 -1px whitesmoke;
+    color: black !important;
+}
+
+.bttnmonster{
+    background-image:  url("../images/kismenu.jpg");
+    border: 1px solid #000000;
+    border-color: black;
+    font-size: 16px;
+    padding: 10px 20px;
+    color: black !important;
+    font: bold 20px "Tw Cen MT" !important;
+    text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke, 0 -1px whitesmoke;
+
+}
+.bttnmonster:hover{
+    background-image:  url("../images/monsterr.png");
+    border-color: white;
+    color: #08c70c !important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.bttnmonster:active{
+    background-image:  url("../images/kismenu.jpg");
+    border-color: black !important;
+    text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke, 0 -1px whitesmoke;
+    color: black !important;
+}
+
+.bttn{
+    background-image:  url("../images/WoodBtn.png");
+    border: 2px solid #876729;
+    font-size: 16px;
+    padding: 10px 20px;
+}
+
+
+
+.bttn:hover{
+    background-image:  url("../images/texture01.png");
+
+
+}
+
+.bttn:active {
+    background-image: url("../images/WoodBtn.png");
+}
+
+.bttnk:hover{
+    background-image:  url("../images/texture01.png");
+}
+
+.bttnk:active{
+    background-image:  url("../images/WoodBtn.png");
+}
+
+.arfont{
+    font-family: "Tw Cen MT";
+    font-size: 20px;
+    font-weight: bold;
+    color: #ac0018;
+    line-height: 1.5;
+    text-align: center;
+
+}
+
+.pagination a{
+    font: bold 30px "Tw Cen MT";
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+.leiras{
+    font-family: "Tw Cen MT";
+    font-size: 20px;
+    font-weight: bold;
+    color: #855e19;
+    line-height: 0.8;
+}
+.leiraskosar{
+    font-family: "Tw Cen MT";
+    font-size: 16px;
+    font-weight: bold;
+    color: #855e19;
+    line-height: 0.8;
+    vertical-align: top;
+}
+
+.paddingtd{
+    padding: 5px;
+}
+
+.infoimgpadding{
+    height: 150px;
+    width: 200px;
+}
+
+.infotextpadding{
+    height: 170px;
+    width: 750px;
+}
+
+.infotd{
+    width: 25px;
+
+}
+
+.infotext{
+    font-family: "Tw Cen MT";
+    font-size:25px;
+    font-weight: bold;
+    color: #FFFFFF;
+
+}
+
+.infokeret{
+    border: 3px solid transparent;
+    border-color: #2E2E2E;
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    background: url("../images/woood.png") repeat;
+}
+.infokeretseged{
+    border-left: solid transparent;
+}
+
+#textarea {
+    resize: none;
+    width: 800px;
+    height: 530px;
+    color: #FFFFFF;
+    font: bold 30px "Tw Cen MT";
+    background-image: url("../images/woood.png");
+    text-align: center;
+}
+::placeholder {
+
+    color: #c7c7c7;
+    font-size: 20px;
+    text-align: center;
+}
+
+.uinput{
+    height: 30px;
+    width: 400px;
+    font: bold 30px "Tw Cen MT";
+
+}
+
+.images {
+
+    width:120px;
+    height:140px;
+
+
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+.vilagos-betu {
+    color: #80bdff;
+}
+section{
+    min-height: 35%;
+}
+input[type="password"]
+{
+    -webkit-text-security: disc;
+    height: 30px;
+    width: 400px;
+    font: bold 30px "Tw Cen MT";
+    background-image: url("../images/WoodBtn.png");
+    color: #FFFFFF;
+    border-bottom: 3px;
+    border-color: black;
+    border-style: groove;
+}
+
+input
+{
+
+    background-image: url("../images/WoodBtn.png");
+    color: #FFFFFF;
+    border-color: black;
+}

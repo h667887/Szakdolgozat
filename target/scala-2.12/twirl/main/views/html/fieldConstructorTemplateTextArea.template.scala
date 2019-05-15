@@ -30,8 +30,7 @@ object fieldConstructorTemplateTextArea extends _root_.play.twirl.api.BaseScalaT
       {
 
 
-Seq[Any](format.raw/*1.34*/("""
-
+Seq[Any](format.raw/*2.1*/("""
 """),_display_(/*3.2*/elements/*3.10*/.input))
       }
     }
@@ -48,11 +47,11 @@ Seq[Any](format.raw/*1.34*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 06 19:23:20 CET 2018
-                  SOURCE: C:/Users/Flash/Desktop/git/PizzaPapa/4-prototipus 2/pizza-papa/app/views/fieldConstructorTemplateTextArea.scala.html
-                  HASH: 2021e475f140bca475a18651e607a40701c7b699
-                  MATRIX: 989->1|1116->33|1146->38|1162->46
-                  LINES: 28->1|33->1|35->3|35->3
+                  DATE: Wed May 15 13:56:37 CEST 2019
+                  SOURCE: C:/Users/Flash/Documents/GitHub/Szakdolgozat/app/views/fieldConstructorTemplateTextArea.scala.html
+                  HASH: 99508d25d419487e330eadd022bf463022360a0a
+                  MATRIX: 989->1|1115->34|1142->36|1158->44
+                  LINES: 28->1|33->2|34->3|34->3
                   -- GENERATED --
               */
           

@@ -7,7 +7,7 @@
 		revision="1.0-SNAPSHOT"
 		conf="compile"
 		confs="compile, runtime, test, provided, optional, universal, universal-docs, universal-src, windows, docker, linux, rpm, debian, compile-internal, runtime-internal, test-internal, plugin, pom, scala-tool, docs"
-		date="20181206192143"/>
+		date="20190515135636"/>
 	<dependencies>
 		<module organisation="org.apache.commons" name="commons-email">
 			<revision name="1.2" status="release" pubdate="20091101235036" resolver="sbt-chain" artresolver="sbt-chain" homepage="http://commons.apache.org/email/" downloaded="false" searched="false" default="false" conf="default, compile, runtime, default(compile), master" position="87">

@@ -30,8 +30,7 @@ object info_old extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.H
       {
 
 
-Seq[Any](format.raw/*1.33*/("""
-
+Seq[Any](format.raw/*2.1*/("""
 """),_display_(/*3.2*/layout("Userek")/*3.18*/(user)/*3.24*/(sumPrice)/*3.34*/ {_display_(Seq[Any](format.raw/*3.36*/("""
 
 """)))}))
@@ -50,11 +49,11 @@ Seq[Any](format.raw/*1.33*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 06 19:23:21 CET 2018
-                  SOURCE: C:/Users/Flash/Desktop/git/PizzaPapa/4-prototipus 2/pizza-papa/app/views/old/info_old.scala.html
-                  HASH: 4f022a9ce1c62524cca33f9c1c3ba1849ae4d326
-                  MATRIX: 961->1|1087->32|1117->37|1141->53|1155->59|1173->69|1212->71
-                  LINES: 28->1|33->1|35->3|35->3|35->3|35->3|35->3
+                  DATE: Wed May 15 13:56:37 CEST 2019
+                  SOURCE: C:/Users/Flash/Documents/GitHub/Szakdolgozat/app/views/old/info_old.scala.html
+                  HASH: 635f0651d1f7516c3c19af42c662089567d5d279
+                  MATRIX: 961->1|1086->33|1113->35|1137->51|1151->57|1169->67|1208->69
+                  LINES: 28->1|33->2|34->3|34->3|34->3|34->3|34->3
                   -- GENERATED --
               */
           

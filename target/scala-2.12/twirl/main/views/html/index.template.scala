@@ -32,8 +32,7 @@ object index extends _root_.play.twirl.api.BaseScalaTemplate[play.twirl.api.Html
 /*3.2*/import helper._
 
 
-Seq[Any](format.raw/*2.33*/("""
-"""),format.raw/*4.1*/("""
+Seq[Any](format.raw/*4.1*/("""
 
 """),_display_(/*6.2*/layout("Index")/*6.17*/(user)/*6.23*/(sumPrice)/*6.33*/ {_display_(Seq[Any](format.raw/*6.35*/("""
 
@@ -69,11 +68,11 @@ Seq[Any](format.raw/*2.33*/("""
 
               /*
                   -- GENERATED --
-                  DATE: Thu Dec 06 19:23:20 CET 2018
-                  SOURCE: C:/Users/Flash/Desktop/git/PizzaPapa/4-prototipus 2/pizza-papa/app/views/index.scala.html
-                  HASH: 2d8adf56e8891f63058eea2ffbd1f3c01f0d3524
-                  MATRIX: 651->1|978->20|1082->54|1127->51|1155->71|1185->76|1208->91|1222->97|1240->107|1279->109|1309->113|1399->177|1438->207|1478->209|1515->219|1585->262|1599->267|1636->283|1732->349|1761->351
-                  LINES: 24->1|29->2|32->3|35->2|36->4|38->6|38->6|38->6|38->6|38->6|40->8|43->11|43->11|43->11|44->12|45->13|45->13|45->13|47->15|48->16
+                  DATE: Wed May 15 13:56:37 CEST 2019
+                  SOURCE: C:/Users/Flash/Documents/GitHub/Szakdolgozat/app/views/index.scala.html
+                  HASH: 01ab3c95bd7d151794e4dea2b2386869b127c6f5
+                  MATRIX: 651->1|978->19|1082->52|1126->68|1154->71|1177->86|1191->92|1209->102|1248->104|1276->106|1363->167|1402->197|1442->199|1478->208|1547->250|1561->255|1598->271|1692->335|1720->336
+                  LINES: 24->1|29->2|32->3|35->4|37->6|37->6|37->6|37->6|37->6|39->8|42->11|42->11|42->11|43->12|44->13|44->13|44->13|46->15|47->16
                   -- GENERATED --
               */
           

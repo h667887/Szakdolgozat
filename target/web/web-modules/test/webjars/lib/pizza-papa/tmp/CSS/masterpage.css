@@ -1,0 +1,967 @@
+
+.keret {
+
+     border: 5px solid transparent;
+     border-image: url(../images/wood.png) 10% round;
+     text-align: center;
+     margin-left: auto;
+     margin-right: auto;
+     border-collapse: separate;
+     background-image: url("../images/asd.png");
+     height: 1000px;
+     width: 1000px;
+ }
+
+.keretadmin {
+
+    border: 5px solid transparent;
+    border-image: url(../images/wood.png) 10% round;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    background-image: url("../images/asd.png");
+    height: 1300px;
+    width: 1000px;
+}
+
+.keretkocsi {
+
+    border: 5px solid transparent;
+    border-image: url(../images/wood.png) 10% round;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    background-image: url("../images/asd.png");
+    height: 500px;
+    width: 1000px;
+}
+
+.keretkocsiorder {
+
+    border: 5px solid transparent;
+    border-image: url(../images/wood.png) 10% round;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    background-image: url("../images/asd.png");
+    height: 500px;
+    width: 1200px;
+}
+
+.keretlog {
+
+    border: 5px solid transparent;
+    border-image: url(../images/wood.png) 10% round;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    background-image: url("../images/asd.png");
+    height: 500px;
+    width: 700px;
+}
+
+.keretfinal {
+
+    border: 5px solid transparent;
+    border-image: url(../images/wood.png) 10% round;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    background-image: url("../images/asd.png");
+    height: 700px;
+    width: 700px;
+}
+
+.keretindex {
+
+    border: 5px solid transparent;
+    border-image: url(../images/wood.png) 20% round;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    background-image: url("../images/index.png");
+    width: 1000px;
+    height: 1000px;
+
+}
+
+.keretuzenj{
+     border: 10px solid transparent;
+     border-image: url(../images/texture3.png) 20% round;
+     text-align: center;
+     width: 830px;
+     height: 561px;
+     position: relative;
+ }
+
+
+.keretthanks{
+    border: 10px solid transparent;
+    border-image: url(../images/texture3.png) 20% round;
+    background-image: url("../images/woood.png");
+    text-align: center;
+    width: 830px;
+    height: 300px;
+    position: relative;
+}
+
+.kiskeret {
+
+    border: 2px solid transparent;
+    border-image: url(../images/texture3.png) 20% round;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    background-repeat: no-repeat;
+}
+
+.keretcreator {
+
+    border: 5px solid transparent;
+    border-image: url(../images/texture3.png) 20% round;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    background-image: url("../images/proftable.jpg");
+    height: 1000px;
+    width: 1300px;
+}
+
+.thanks {
+    border: 5px solid transparent;
+    border-image: url(../images/wood.png) 10% round;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    background-image: url("../images/asd.png");
+    height: 600px;
+    width: 1000px;
+}
+
+.adminorder {
+
+    border: 2px solid transparent;
+    border-color: #000000 !important;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+}
+
+.kiskeretb {
+
+    border: 2px solid transparent;
+    border-color: black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+
+}
+
+.kiskeretc{
+    background-image:  url("../images/proftable.jpg");
+    border: 2px solid transparent;
+    border-color: black;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+
+}
+
+
+.kicsikep{
+    width: 1000px;
+    height: 1000px;
+
+}
+
+
+.kicsimenu{
+
+    border: 1px;
+    border-image: url("../images/wood.png") !important;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    background-image: url("../images/wood.png");
+
+}
+
+.header{
+    height: 50px;
+
+}
+
+.hm-gradient {
+    background-image: linear-gradient(to top, #f3e7e9 0%, #e3eeff 99%, #e3eeff 100%);
+}
+.darken-grey-text {
+    color: #2E2E2E;
+}
+
+body{
+    background: url("../images/t2222.jpg") 100% repeat;
+    padding-left: 0;
+
+}
+#menu{
+    background-image:url("../images/MENUnew.png");
+    width: 1000px;
+    height: 120px;
+
+}
+
+.pizzafont{
+    font-family: "Tw Cen MT";
+    font-size: 27px;
+    font-weight: bold;
+    color: #ac0018;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.checkoutfont{
+    font-family: "Tw Cen MT";
+    font-size: 30px;
+    font-weight: bold;
+    color: #032d37;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.modfont{
+    font-family: "Tw Cen MT";
+    font-size: 27px;
+    font-weight: bold;
+    color: white;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-align: left;
+
+}
+
+.nofont{
+    font-family: "Tw Cen MT";
+    font-size: 27px;
+    font-weight: bold;
+    color: gray;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.kosarfont{
+    font-family: "Tw Cen MT";
+    font-size: 27px;
+    font-weight: bold;
+    color: #ac0018;
+    width: 180px;
+    height: 50px;
+    vertical-align: top;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+.kosarfontseged{
+    font-family: "Tw Cen MT";
+    font-size: 20px;
+    font-weight: bold;
+    color: #032d37;
+    width: 180px;
+    vertical-align: top;
+
+
+}
+
+.extrafont{
+    font-family: "Tw Cen MT";
+    font-size: 25px;
+    font-weight: bold;
+    color: #032d37;
+    width: 180px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+.finalfont{
+    font-family: "Tw Cen MT";
+    font-size: 30px;
+    font-weight: bold;
+    color: #ac0018;
+    width: 180px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+.font{
+    font-family: "Tw Cen MT";
+    font-size: 20px;
+    font-weight: bold;
+    color: #dd9a39;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+a:hover {
+    color: orangered !important;
+}
+a:active {
+    color: #dd9a39 !important;
+}
+
+.hiba{
+    font-family: "Tw Cen MT";
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
+
+
+}
+.hibaprof{
+    font-family: "Tw Cen MT";
+    font-size: 20px;
+    font-weight: bold;
+    color: red;
+    text-align: right;
+    width: 193px;
+
+
+}
+
+.inputfont{
+    font-family: "Tw Cen MT";
+    font-size: 20px;
+    font-weight: bold;
+    color: white ;
+    height: 1px;
+    width: 3px;
+    text-align: left;
+    text-indent: 307px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+.inputfontreglog{
+    font-family: "Tw Cen MT";
+    font-size: 20px;
+    font-weight: bold;
+    color: white;
+    height: 1px;
+    width: 3px;
+    text-align: center;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+
+}
+
+#tablepadding{
+    padding: 30px;
+    border-collapse: separate;
+
+}
+
+
+#foot{
+    background: url("../images/woood.png") repeat;
+    position: absolute;
+    min-height: 35%;
+    width: 100%;
+    margin-bottom: -100%;
+    margin-right: -1px;
+
+}
+
+.bttne{
+    background-image:  url("../images/WoodBtn.png");
+    border: 2px solid #000000;
+    border-color: black !important;
+    font-size: 16px;
+    padding: 10px 60px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.bttne:hover{
+    background-image:  url("../images/texture01.png");
+    border-color: black !important;
+    background-color: black !important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+
+}
+.bttne:active{
+    background-image:  url("../images/WoodBtn.png");
+    border-color: black !important;
+    background-color: black !important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+.bttnful{
+    background-image:  url("../images/kismenu.jpg");
+    border: 1px solid #000000;
+    border-color: black;
+    font-size: 16px;
+    padding: 10px 20px;
+    color: black !important;
+    font: bold 20px "Tw Cen MT" !important;
+    text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke, 0 -1px whitesmoke;
+
+}
+
+
+.bttnful:hover{
+    background-image:  url("../images/kismenuhover.jpg");
+    border-color: white;
+    color: white !important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+
+
+.bttnful:active{
+    background-image:  url("../images/kismenu.jpg");
+    border-color: black !important;
+    text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke, 0 -1px whitesmoke;
+    color: black !important;
+}
+
+.bttnmonster{
+    background-image:  url("../images/kismenu.jpg");
+    border: 1px solid #000000;
+    border-color: black;
+    font-size: 16px;
+    padding: 10px 20px;
+    color: black !important;
+    font: bold 20px "Tw Cen MT" !important;
+    text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke, 0 -1px whitesmoke;
+
+}
+.bttnmonster:hover{
+    background-image:  url("../images/monsterr.png");
+    border-color: limegreen;
+    color: #08c70c !important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+.bttnmonster:active{
+    background-image:  url("../images/kismenu.jpg");
+    border-color: black !important;
+    text-shadow: -1px 0 whitesmoke, 0 1px whitesmoke, 1px 0 whitesmoke, 0 -1px whitesmoke;
+    color: black !important;
+}
+
+.bttn{
+    background-image:  url("../images/WoodBtn.png");
+    border: 1px solid #000000;
+    border-color: black !important;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+
+.bttn:hover{
+    background-image:  url("../images/texture01.png");
+    border: 1px solid #000000;
+    border-color: black !important;
+    background-color: black !important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.bttn:active{
+    background-image: url("../images/WoodBtn.png");
+    border: 1px solid #000000;
+    border-color: black !important;
+    background-color: black !important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+
+.bttnk{
+    background-image:  url("../images/WoodBtn.png") !important;
+    border: 1px solid #000000;
+    border-color: black !important;
+    font-size: 16px;
+    padding: 4px 12px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.bttnk:hover{
+    background-image:  url("../images/texture01.png");
+    border: 1px solid #000000;
+    border-color: black !important;
+    background-color: black !important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.bttnk:active{
+    background-image:  url("../images/WoodBtn.png") !important;
+    border: 1px solid #000000;
+    border-color: black !important;
+    background-color: black !important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+button:disabled,
+button[disabled]{
+    border: 1px solid #999999;
+    background-color: #cccccc;
+    color: #666666;
+}
+
+.bttna{
+     background-image:  url("../images/WoodBtn.png") !important;
+     border: 1px solid #000000;
+     border-color: black !important;
+     font-size: 12px;
+     padding: 8px 130px;
+     text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+ }
+
+
+
+.bttna:hover{
+    background-image:  url("../images/texture01.png") !important;
+    border: 1px solid #000000;
+    border-color: black !important;
+    background-color: black !important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.bttna:active{
+    background-image:  url("../images/WoodBtn.png") !important;
+    border: 1px solid #000000;
+    border-color: black !important;
+    background-color: black !important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.bttnab{
+    background-image:  url("../images/WoodBtn.png") !important;
+    border: 1px solid #000000;
+    border-color: black !important;
+    font-size: 12px;
+    padding: 8px 25px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    text-align: right;
+
+}
+
+
+
+.bttnab:hover{
+    background-image:  url("../images/texture01.png") !important;
+    border: 1px solid #000000;
+    border-color: black !important;
+    background-color: black !important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.bttnab:active{
+    background-image:  url("../images/WoodBtn.png") !important;
+    border: 1px solid #000000;
+    border-color: black !important;
+    background-color: black !important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.bttnak{
+    background-image:  url("../images/WoodBtn.png") !important;
+    border: 1px solid #000000;
+    border-color: black !important;
+    font-size: 12px;
+    padding: 8px 75px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+
+
+.bttnak:hover{
+    background-image:  url("../images/texture01.png") !important;
+    border: 1px solid #000000;
+    border-color: black !important;
+    background-color: black !important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.bttnak:active{
+    background-image:  url("../images/WoodBtn.png") !important;
+    border: 1px solid #000000;
+    border-color: black !important;
+    background-color: black !important;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.arfont{
+    font-family: "Tw Cen MT";
+    font-size: 20px;
+    font-weight: bold;
+    color: #ac0018;
+    line-height: 1.5;
+    text-align: center;
+
+}
+
+.pagination a{
+    font: bold 30px "Tw Cen MT";
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+}
+
+.leiras{
+    font-family: "Tw Cen MT";
+    font-size: 20px;
+    font-weight: bold;
+    color: #855e19;
+    line-height: 0.8;
+    max-width: 100%;
+    max-height: 100%;
+    height: 50px;
+
+}
+.leiraskosar{
+     font-family: "Tw Cen MT";
+     font-size: 16px;
+     font-weight: bold;
+     color: #855e19;
+     line-height: 0.8;
+     vertical-align: center;
+ }
+
+.leirasextra{
+    font-family: "Tw Cen MT";
+    font-size: 20px;
+    font-weight: bold;
+    color: #855e19;
+    line-height: 0.8;
+    vertical-align: top;
+}
+
+.paddingtd{
+    padding: 5px;
+}
+
+.infoimgpadding{
+    height: 150px;
+    width: 200px;
+}
+
+.infotextpadding{
+    height: 170px;
+    width: 750px;
+}
+
+.infotd{
+    width: 25px;
+
+}
+
+.infotext{
+    font-family: "Tw Cen MT";
+    font-size:25px;
+    font-weight: bold;
+    color: #FFFFFF;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
+}
+
+.infokeret{
+    border: 3px solid transparent;
+    border-color: #2E2E2E;
+
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: separate;
+    background: url("../images/woood.png") repeat;
+}
+.infokeretseged{
+    border-left: solid transparent;
+}
+
+#textarea {
+    resize: none;
+    width: 800px;
+    height: 530px;
+    color: #FFFFFF;
+    font: bold 30px "Tw Cen MT";
+    background-image: url("../images/woood.png");
+    text-align: center;
+}
+
+.textthanks{
+    color: #FFFFFF;
+    font: bold 30px "Tw Cen MT";
+    text-align: center;
+}
+
+::placeholder {
+
+    color: #c7c7c7;
+    font-size: 20px;
+    text-align: center;
+}
+
+.uinput{
+    height: 30px;
+    width: 400px;
+    font: bold 30px "Tw Cen MT";
+
+}
+
+.pinput{
+    background-image: url("../images/proftable.jpg");
+    height: 30px;
+    width: 400px;
+    font: bold 30px "Tw Cen MT";
+    color: black; !important;
+
+}
+
+.ainput{
+    height: 30px;
+    width: 170px;
+    font: bold 30px "Tw Cen MT";
+    text-align: center;
+
+}
+
+.images {
+
+    width:120px;
+    height:140px;
+
+
+}
+img {
+    max-width: 100%;
+    max-height: 100%;
+
+}
+
+section{
+    min-height: 35%;
+}
+input[type="password"]
+{
+    -webkit-text-security: disc;
+    height: 30px;
+    width: 400px;
+    font: bold 30px "Tw Cen MT";
+    background-image: url("../images/WoodBtn.png");
+    color: #FFFFFF;
+    border-bottom: 3px;
+    border-color: black;
+    border-style: groove;
+}
+
+input
+{
+
+    background-image: url("../images/WoodBtn.png");
+    color: #FFFFFF;
+    border-color: black;
+}
+
+.profkep{
+    width: 250px;
+    height: 250px;
+
+}
+
+.rang{
+    width: 60px;
+    height: 60px;
+    vertical-align: top;
+}
+
+.proffont{
+    font-family: "Tw Cen MT";
+    font-size: 27px;
+    font-weight: bold;
+    color: #ac0018;
+    width: 180px;
+    vertical-align: center;
+    text-align: left;
+
+}
+
+.proffontseged{
+    font-family: "Tw Cen MT";
+    font-size: 20px;
+    font-weight: bold;
+    color: #032d37;
+    width: 350px;
+    vertical-align: center;
+    text-align: left;
+
+}
+
+.profmod{
+    resize: none;
+    width: 400px;
+    height: 230px;
+    color: #FFFFFF;
+    font: bold 30px "Tw Cen MT";
+    background-image: url("../images/woood.png");
+    text-align: center;
+    border: 3px solid transparent;
+    border-color: black !important;
+}
+
+.racs{
+    border: 3px solid;
+    border-color: black;
+}
+
+
+/* RADIO BUTTON */
+
+
+.list {
+    flex: 0 0 20rem;
+}
+.list__item {
+    position: relative;
+}
+.list__item:hover > .label {
+    color: #ac0018;
+}
+.list__item:hover > .label::before {
+    border: 0.5rem solid #ac0018;
+    margin-right: 2rem;
+}
+.radio-btn {
+    position: relative;
+    opacity: 0;
+    visibility: hidden;
+}
+.radio-btn:checked + .label {
+    color: #ac0018;
+}
+.radio-btn:checked + .label::before {
+    margin-right: 2rem;
+    border: 0.5rem solid #ac0018;
+    background: #000000;
+}
+.label {
+    display: flex;
+    align-items: center;
+    padding: 0.75rem 0;
+    color: #032d37;
+    font-size: 1.75rem;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.25s linear;
+}
+.label::before {
+    display: inline-block;
+    content: "";
+    height: 1.5rem;
+    width: 1.5rem;
+    margin-right: 0.625rem;
+    border: 0.5rem solid #032d37;
+    border-radius: 50%;
+    transition: all 0.25s linear;
+}
+/* END OF RADIO BUTTON */
+
+/*CHECK BOX*/
+@keyframes click-wave {
+    0% {
+        height: 10px;
+        width: 10px;
+        opacity: 0.35;
+        position: relative;
+    }
+    100% {
+        height: 50px;
+        width: 50px;
+        margin-left: -15px;
+        margin-top: -35px;
+        opacity: 0;
+
+    }
+}
+.option-input {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+
+    position: relative;
+    height: 20px;
+    width: 20px;
+    transition: all 0.15s ease-out 0s;
+    background: #032d37;
+    border: none;
+    color: #ac0018;
+    cursor: pointer;
+    display: inline-block;
+
+    outline: none;
+
+
+
+}
+.option-input:hover{
+    background: #ac0018;
+
+}
+.option-input:checked{
+    background: #ac0018;
+    color: #032d37;
+}
+
+.option-input:checked::before {
+    height: 20px;
+    width: 20px;
+    position: relative;
+    content: '✔';
+    display: inline-block;
+    font-size: 15px;
+    text-align: center;
+    line-height: 20px;
+
+
+
+}
+.option-input:checked::after{
+    -webkit-animation: click-wave 0.4s;
+    -moz-animation: click-wave 0.4s;
+    animation: click-wave 0.4s;
+    background: #ac0018;
+    content: '';
+    display: block;
+    position: absolute;
+
+
+}
+.checktext:hover{
+    color: #ac0018;
+
+}
+
+.checktext{
+
+    color: #032d37;
+    transition: all 0.25s linear;
+    cursor: pointer;
+
+}
+
+
+
+/* END OF CHECK BOX*/

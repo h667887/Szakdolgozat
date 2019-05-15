@@ -1,0 +1,49 @@
+Almond- 150 Ft
+Bacon- 250 ft
+Bean- 100 ft
+Blue Cheese- 250 Ft
+Cheddar- 250 Ft
+Chicken breasts- 300 ft
+Corn- 100 Ft
+Cucumber- 100 Ft
+Egg- 150 Ft
+Feta- 300 Ft
+Frankfurter- 200 ft
+Shrimps- 350 Ft
+Ham- 250 Ft
+Jalapeno- 150 Ft
+Leeks- 100 Ft
+Mozarella- 200 Ft
+Mushroom- 150 Ft
+Olive- 100 Ft
+Onions- 100 Ft
+Pariser- 150 Ft
+Parmesan- 250 Ft
+Peach- 200 Ft
+Peas- 100 Ft
+Pepper- 100 Ft
+Pineapple- 150 Ft
+Purple onion- 100 Ft
+Ribs- 300 Ft
+Ruccola- 100 Ft
+Salami- 250 Ft
+Salmon- 200 Ft
+Sausage- 250 Ft
+Sesame- 100 Ft
+Smoked cheese- 200 Ft
+Tomato- 150 Ft
+Pizza sauce- 150 Ft
+BBQ sauce- 200 ft
+Raw sauce- 300 Ft
+Cheddar sauce- 200 Ft
+Chili sauce- 150 Ft
+Garlic-oil sauce- 150 Ft
+Mustard-honey- 200 Ft
+Pesto- 250 Ft
+Salsa- 200 Ft
+Szechuan sauce- 250 Ft
+Tartar sauce- 150 Ft
+Tzaziki sauce- 200 Ft
+BASE24- 350 Ft
+BASE32- 550 Ft
+BASE51- 950 Ft
